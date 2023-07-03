@@ -750,8 +750,8 @@ License: For each use you must have a valid license purchased only from above li
 	<!-- Plugin js for this page -->
   <script src="<?php echo base_url ('assets/vendors/flatpickr/flatpickr.min.js'); ?>"></script>
   <script src="<?php echo base_url ('assets/vendors/apexcharts/apexcharts.min.js'); ?>"></script>
+  <script src="<?php echo base_url ('assets/vendors/moment/moment.min.js'); ?>"></script>
   <script src="<?php echo base_url ('assets/vendors/fullcalendar/main.min.js'); ?>"></script>
-  <script src="<?php echo base_url ('assets/js/fullcalendar.js'); ?>"></script>
 
 	<!-- End plugin js for this page -->
 
@@ -761,7 +761,7 @@ License: For each use you must have a valid license purchased only from above li
 	<!-- endinject -->
 
 	<!-- Custom js for this page -->
-  <script src="<?php echo base_url ('assets/js/dashboard-light.js'); ?>"></script>
+  <script src="<?php echo base_url ('assets/js/fullcalendar.js'); ?>"></script>
 	<!-- End custom js for this page -->
 
 </body>
