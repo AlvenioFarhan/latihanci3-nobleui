@@ -1,7 +1,3 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-?>
-
 <!DOCTYPE html>
 <!--
 Template Name: NobleUI - HTML Bootstrap 5 Admin Dashboard Template
@@ -96,13 +92,13 @@ License: For each use you must have a valid license purchased only from above li
             </div>
           </li>
           <li class="nav-item">
-            <a href="<?php echo base_url ('apps/chat'); ?>" class="nav-link">
+            <a href="pages/apps/chat.html" class="nav-link">
               <i class="link-icon" data-feather="message-square"></i>
               <span class="link-title">Chat</span>
             </a>
           </li>
           <li class="nav-item">
-            <a href="<?php echo base_url ('apps/calendar'); ?>" class="nav-link">
+            <a href="pages/apps/calendar.html" class="nav-link">
               <i class="link-icon" data-feather="calendar"></i>
               <span class="link-title">Calendar</span>
             </a>
@@ -117,7 +113,7 @@ License: For each use you must have a valid license purchased only from above li
             <div class="collapse" id="uiComponents">
               <ul class="nav sub-menu">
                 <li class="nav-item">
-                  <a href="<?php echo base_url ('pages/ui-components/accordion'); ?>" class="nav-link">Accordion</a>
+                  <a href="pages/ui-components/accordion.html" class="nav-link">Accordion</a>
                 </li>
                 <li class="nav-item">
                   <a href="pages/ui-components/alerts.html" class="nav-link">Alerts</a>
@@ -448,7 +444,7 @@ License: For each use you must have a valid license purchased only from above li
                     <a href="pages/apps/chat.html" class="dropdown-item d-flex flex-column align-items-center justify-content-center wd-70 ht-70"><i data-feather="message-square" class="icon-lg mb-1"></i><p class="tx-12">Chat</p></a>
                   </div>
                   <div class="col-3 text-center">
-                    <a href="<?php echo base_url ('apps/calendar.html'); ?>" class="dropdown-item d-flex flex-column align-items-center justify-content-center wd-70 ht-70"><i data-feather="calendar" class="icon-lg mb-1"></i><p class="tx-12">Calendar</p></a>
+                    <a href="pages/apps/calendar.html" class="dropdown-item d-flex flex-column align-items-center justify-content-center wd-70 ht-70"><i data-feather="calendar" class="icon-lg mb-1"></i><p class="tx-12">Calendar</p></a>
                   </div>
                   <div class="col-3 text-center">
                     <a href="pages/email/inbox.html" class="dropdown-item d-flex flex-column align-items-center justify-content-center wd-70 ht-70"><i data-feather="mail" class="icon-lg mb-1"></i><p class="tx-12">Email</p></a>
@@ -649,434 +645,651 @@ License: For each use you must have a valid license purchased only from above li
 			</nav>
 			<!-- partial -->
 
-			<div class="page-content">
+            <div class="page-content">
 
-        <div class="d-flex justify-content-between align-items-center flex-wrap grid-margin">
-          <div>
-            <h4 class="mb-3 mb-md-0">Welcome to Dashboard</h4>
-          </div>
-          <div class="d-flex align-items-center flex-wrap text-nowrap">
-            <div class="input-group flatpickr wd-200 me-2 mb-2 mb-md-0" id="dashboardDate">
-              <span class="input-group-text input-group-addon bg-transparent border-primary" data-toggle><i data-feather="calendar" class="text-primary"></i></span>
-              <input type="text" class="form-control bg-transparent border-primary" placeholder="Select date" data-input>
+<div class="row chat-wrapper">
+    <div class="col-md-12">
+<div class="card">
+<div class="card-body">
+<div class="row position-relative">
+  <div class="col-lg-4 chat-aside border-end-lg">
+    <div class="aside-content">
+      <div class="aside-header">
+        <div class="d-flex justify-content-between align-items-center pb-2 mb-2">
+          <div class="d-flex align-items-center">
+            <figure class="me-2 mb-0">
+              <img src="<?php echo base_url ('assets/images/faces/face1.jpg'); ?>" class="img-sm rounded-circle" alt="profile">
+              <div class="status online"></div>
+            </figure>
+            <div>
+              <h6>Amiah Burton</h6>
+              <p class="text-muted tx-13">Software Developer</p>
             </div>
-            <button type="button" class="btn btn-outline-primary btn-icon-text me-2 mb-2 mb-md-0">
-              <i class="btn-icon-prepend" data-feather="printer"></i>
-              Print
-            </button>
-            <button type="button" class="btn btn-primary btn-icon-text mb-2 mb-md-0">
-              <i class="btn-icon-prepend" data-feather="download-cloud"></i>
-              Download Report
-            </button>
+          </div>
+          <div class="dropdown">
+            <a type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="icon-lg text-muted pb-3px" data-feather="settings"></i>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="eye" class="icon-sm me-2"></i> <span class="">View Profile</span></a>
+              <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="edit-2" class="icon-sm me-2"></i> <span class="">Edit Profile</span></a>
+              <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="aperture" class="icon-sm me-2"></i> <span class="">Add status</span></a>
+              <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="settings" class="icon-sm me-2"></i> <span class="">Settings</span></a>
+            </div>
           </div>
         </div>
-
-        <div class="row">
-          <div class="col-12 col-xl-12 stretch-card">
-            <div class="row flex-grow-1">
-              <div class="col-md-4 grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="d-flex justify-content-between align-items-baseline">
-                      <h6 class="card-title mb-0">New Customers</h6>
-                      <div class="dropdown mb-2">
-                        <a type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          <i class="icon-lg text-muted pb-3px" data-feather="more-horizontal"></i>
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                          <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="eye" class="icon-sm me-2"></i> <span class="">View</span></a>
-                          <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="edit-2" class="icon-sm me-2"></i> <span class="">Edit</span></a>
-                          <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="trash" class="icon-sm me-2"></i> <span class="">Delete</span></a>
-                          <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="printer" class="icon-sm me-2"></i> <span class="">Print</span></a>
-                          <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="download" class="icon-sm me-2"></i> <span class="">Download</span></a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-6 col-md-12 col-xl-5">
-                        <h3 class="mb-2">3,897</h3>
-                        <div class="d-flex align-items-baseline">
-                          <p class="text-success">
-                            <span>+3.3%</span>
-                            <i data-feather="arrow-up" class="icon-sm mb-1"></i>
-                          </p>
-                        </div>
-                      </div>
-                      <div class="col-6 col-md-12 col-xl-7">
-                        <div id="customersChart" class="mt-md-3 mt-xl-0"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+        <form class="search-form">
+          <div class="input-group">
+            <span class="input-group-text">
+              <i data-feather="search" class="cursor-pointer"></i>
+            </span>
+            <input type="text" class="form-control" id="searchForm" placeholder="Search here...">
+          </div>
+        </form>
+      </div>
+      <div class="aside-body">
+        <ul class="nav nav-tabs nav-fill mt-3" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="chats-tab" data-bs-toggle="tab" data-bs-target="#chats" role="tab" aria-controls="chats" aria-selected="true">
+              <div class="d-flex flex-row flex-lg-column flex-xl-row align-items-center justify-content-center">
+                <i data-feather="message-square" class="icon-sm me-sm-2 me-lg-0 me-xl-2 mb-md-1 mb-xl-0"></i>
+                <p class="d-none d-sm-block">Chats</p>
               </div>
-              <div class="col-md-4 grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="d-flex justify-content-between align-items-baseline">
-                      <h6 class="card-title mb-0">New Orders</h6>
-                      <div class="dropdown mb-2">
-                        <a type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          <i class="icon-lg text-muted pb-3px" data-feather="more-horizontal"></i>
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                          <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="eye" class="icon-sm me-2"></i> <span class="">View</span></a>
-                          <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="edit-2" class="icon-sm me-2"></i> <span class="">Edit</span></a>
-                          <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="trash" class="icon-sm me-2"></i> <span class="">Delete</span></a>
-                          <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="printer" class="icon-sm me-2"></i> <span class="">Print</span></a>
-                          <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="download" class="icon-sm me-2"></i> <span class="">Download</span></a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-6 col-md-12 col-xl-5">
-                        <h3 class="mb-2">35,084</h3>
-                        <div class="d-flex align-items-baseline">
-                          <p class="text-danger">
-                            <span>-2.8%</span>
-                            <i data-feather="arrow-down" class="icon-sm mb-1"></i>
-                          </p>
-                        </div>
-                      </div>
-                      <div class="col-6 col-md-12 col-xl-7">
-                        <div id="ordersChart" class="mt-md-3 mt-xl-0"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="calls-tab" data-bs-toggle="tab" data-bs-target="#calls" role="tab" aria-controls="calls" aria-selected="false">
+              <div class="d-flex flex-row flex-lg-column flex-xl-row align-items-center justify-content-center">
+                <i data-feather="phone-call" class="icon-sm me-sm-2 me-lg-0 me-xl-2 mb-md-1 mb-xl-0"></i>
+                <p class="d-none d-sm-block">Calls</p>
               </div>
-              <div class="col-md-4 grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="d-flex justify-content-between align-items-baseline">
-                      <h6 class="card-title mb-0">Growth</h6>
-                      <div class="dropdown mb-2">
-                        <a type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          <i class="icon-lg text-muted pb-3px" data-feather="more-horizontal"></i>
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-                          <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="eye" class="icon-sm me-2"></i> <span class="">View</span></a>
-                          <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="edit-2" class="icon-sm me-2"></i> <span class="">Edit</span></a>
-                          <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="trash" class="icon-sm me-2"></i> <span class="">Delete</span></a>
-                          <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="printer" class="icon-sm me-2"></i> <span class="">Print</span></a>
-                          <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="download" class="icon-sm me-2"></i> <span class="">Download</span></a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-6 col-md-12 col-xl-5">
-                        <h3 class="mb-2">89.87%</h3>
-                        <div class="d-flex align-items-baseline">
-                          <p class="text-success">
-                            <span>+2.8%</span>
-                            <i data-feather="arrow-up" class="icon-sm mb-1"></i>
-                          </p>
-                        </div>
-                      </div>
-                      <div class="col-6 col-md-12 col-xl-7">
-                        <div id="growthChart" class="mt-md-3 mt-xl-0"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="contacts-tab" data-bs-toggle="tab" data-bs-target="#contacts" role="tab" aria-controls="contacts" aria-selected="false">
+              <div class="d-flex flex-row flex-lg-column flex-xl-row align-items-center justify-content-center">
+                <i data-feather="users" class="icon-sm me-sm-2 me-lg-0 me-xl-2 mb-md-1 mb-xl-0"></i>
+                <p class="d-none d-sm-block">Contacts</p>
               </div>
+            </a>
+          </li>
+        </ul>
+        <div class="tab-content mt-3">
+          <div class="tab-pane fade show active" id="chats" role="tabpanel" aria-labelledby="chats-tab">
+            <div>
+              <p class="text-muted mb-1">Recent chats</p>
+              <ul class="list-unstyled chat-list px-1">
+                <li class="chat-item pe-1">
+                  <a href="javascript:;" class="d-flex align-items-center">
+                    <figure class="mb-0 me-2">
+                      <img src="<?php echo base_url ('assets/images/faces/face2.jpg'); ?>" class="img-xs rounded-circle" alt="user">
+                      <div class="status online"></div>
+                    </figure>
+                    <div class="d-flex justify-content-between flex-grow-1 border-bottom">
+                      <div>
+                        <p class="text-body fw-bolder">John Doe</p>
+                        <p class="text-muted tx-13">Hi, How are you?</p>
+                      </div>
+                      <div class="d-flex flex-column align-items-end">
+                        <p class="text-muted tx-13 mb-1">4:32 PM</p>
+                        <div class="badge rounded-pill bg-primary ms-auto">5</div>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="chat-item pe-1">
+                  <a href="javascript:;" class="d-flex align-items-center">
+                    <figure class="mb-0 me-2">
+                      <img src="<?php echo base_url ('assets/images/faces/face3.jpg'); ?>" class="img-xs rounded-circle" alt="user">
+                      <div class="status offline"></div>
+                    </figure>
+                    <div class="d-flex justify-content-between flex-grow-1 border-bottom">
+                      <div>
+                        <p class="text-body fw-bolder">Carl Henson</p>
+                        <div class="d-flex align-items-center">
+                          <i data-feather="image" class="text-muted icon-md mb-2px"></i>
+                          <p class="text-muted ms-1">Photo</p>
+                        </div>
+                      </div>
+                      <div class="d-flex flex-column align-items-end">
+                        <p class="text-muted tx-13 mb-1">05:24 PM</p>
+                        <div class="badge rounded-pill bg-danger ms-auto">3</div>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="chat-item pe-1">
+                  <a href="javascript:;" class="d-flex align-items-center">
+                    <figure class="mb-0 me-2">
+                      <img src="<?php echo base_url ('assets/images/faces/face4.jpg'); ?>" class="img-xs rounded-circle" alt="user">
+                      <div class="status offline"></div>
+                    </figure>
+                    <div class="d-flex justify-content-between flex-grow-1 border-bottom">
+                      <div>
+                        <p class="text-body">John Doe</p>
+                        <p class="text-muted tx-13">Hi, How are you?</p>
+                      </div>
+                      <div class="d-flex flex-column align-items-end">
+                        <p class="text-muted tx-13 mb-1">Yesterday</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="chat-item pe-1">
+                  <a href="javascript:;" class="d-flex align-items-center">
+                    <figure class="mb-0 me-2">
+                      <img src="<?php echo base_url ('assets/images/faces/face5.jpg'); ?>" class="img-xs rounded-circle" alt="user">
+                      <div class="status online"></div>
+                    </figure>
+                    <div class="d-flex justify-content-between flex-grow-1 border-bottom">
+                      <div>
+                        <p class="text-body">Jensen Combs</p>
+                        <div class="d-flex align-items-center">
+                          <i data-feather="video" class="text-muted icon-md mb-2px"></i>
+                          <p class="text-muted ms-1">Video</p>
+                        </div>
+                      </div>
+                      <div class="d-flex flex-column align-items-end">
+                        <p class="text-muted tx-13 mb-1">2 days ago</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="chat-item pe-1">
+                  <a href="javascript:;" class="d-flex align-items-center">
+                    <figure class="mb-0 me-2">
+                      <img src="<?php echo base_url ('assets/images/faces/face6.jpg'); ?>" class="img-xs rounded-circle" alt="user">
+                      <div class="status offline"></div>
+                    </figure>
+                    <div class="d-flex justify-content-between flex-grow-1 border-bottom">
+                      <div>
+                        <p class="text-body">Yaretzi Mayo</p>
+                        <p class="text-muted tx-13">Hi, How are you?</p>
+                      </div>
+                      <div class="d-flex flex-column align-items-end">
+                        <p class="text-muted tx-13 mb-1">4 week ago</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="chat-item pe-1">
+                  <a href="javascript:;" class="d-flex align-items-center">
+                    <figure class="mb-0 me-2">
+                      <img src="<?php echo base_url ('assets/images/faces/face2.jpg'); ?>" class="img-xs rounded-circle" alt="user">
+                      <div class="status offline"></div>
+                    </figure>
+                    <div class="d-flex justify-content-between flex-grow-1 border-bottom">
+                      <div>
+                        <p class="text-body fw-bolder">John Doe</p>
+                        <p class="text-muted tx-13">Hi, How are you?</p>
+                      </div>
+                      <div class="d-flex flex-column align-items-end">
+                        <p class="text-muted tx-13 mb-1">4:32 PM</p>
+                        <div class="badge rounded-pill bg-primary ms-auto">5</div>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="chat-item pe-1">
+                  <a href="javascript:;" class="d-flex align-items-center">
+                    <figure class="mb-0 me-2">
+                      <img src="<?php echo base_url ('assets/images/faces/face3.jpg'); ?>" class="img-xs rounded-circle" alt="user">
+                      <div class="status online"></div>
+                    </figure>
+                    <div class="d-flex justify-content-between flex-grow-1 border-bottom">
+                      <div>
+                        <p class="text-body fw-bolder">Leonardo Payne</p>
+                        <div class="d-flex align-items-center">
+                          <i data-feather="image" class="text-muted icon-md mb-2px"></i>
+                          <p class="text-muted ms-1">Photo</p>
+                        </div>
+                      </div>
+                      <div class="d-flex flex-column align-items-end">
+                        <p class="text-muted tx-13 mb-1">6:11 PM</p>
+                        <div class="badge rounded-pill bg-danger ms-auto">3</div>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="chat-item pe-1">
+                  <a href="javascript:;" class="d-flex align-items-center">
+                    <figure class="mb-0 me-2">
+                      <img src="<?php echo base_url ('assets/images/faces/face4.jpg'); ?>" class="img-xs rounded-circle" alt="user">
+                      <div class="status online"></div>
+                    </figure>
+                    <div class="d-flex justify-content-between flex-grow-1 border-bottom">
+                      <div>
+                        <p class="text-body">John Doe</p>
+                        <p class="text-muted tx-13">Hi, How are you?</p>
+                      </div>
+                      <div class="d-flex flex-column align-items-end">
+                        <p class="text-muted tx-13 mb-1">Yesterday</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="chat-item pe-1">
+                  <a href="javascript:;" class="d-flex align-items-center">
+                    <figure class="mb-0 me-2">
+                      <img src="<?php echo base_url ('assets/images/faces/face5.jpg'); ?>" class="img-xs rounded-circle" alt="user">
+                      <div class="status online"></div>
+                    </figure>
+                    <div class="d-flex justify-content-between flex-grow-1 border-bottom">
+                      <div>
+                        <p class="text-body">Leonardo Payne</p>
+                        <div class="d-flex align-items-center">
+                          <i data-feather="video" class="text-muted icon-md mb-2px"></i>
+                          <p class="text-muted ms-1">Video</p>
+                        </div>
+                      </div>
+                      <div class="d-flex flex-column align-items-end">
+                        <p class="text-muted tx-13 mb-1">2 days ago</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="chat-item pe-1">
+                  <a href="javascript:;" class="d-flex align-items-center">
+                    <figure class="mb-0 me-2">
+                      <img src="<?php echo base_url ('assets/images/faces/face6.jpg'); ?>" class="img-xs rounded-circle" alt="user">
+                      <div class="status online"></div>
+                    </figure>
+                    <div class="d-flex justify-content-between flex-grow-1 border-bottom">
+                      <div>
+                        <p class="text-body">John Doe</p>
+                        <p class="text-muted tx-13">Hi, How are you?</p>
+                      </div>
+                      <div class="d-flex flex-column align-items-end">
+                        <p class="text-muted tx-13 mb-1">4 week ago</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
-        </div> <!-- row -->
-
-        <div class="row">
-          <div class="col-12 col-xl-12 grid-margin stretch-card">
-            <div class="card overflow-hidden">
-              <div class="card-body">
-                <div class="d-flex justify-content-between align-items-baseline mb-4 mb-md-3">
-                  <h6 class="card-title mb-0">Revenue</h6>
-                  <div class="dropdown">
-                    <a type="button" id="dropdownMenuButton3" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="icon-lg text-muted pb-3px" data-feather="more-horizontal"></i>
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
-                      <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="eye" class="icon-sm me-2"></i> <span class="">View</span></a>
-                      <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="edit-2" class="icon-sm me-2"></i> <span class="">Edit</span></a>
-                      <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="trash" class="icon-sm me-2"></i> <span class="">Delete</span></a>
-                      <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="printer" class="icon-sm me-2"></i> <span class="">Print</span></a>
-                      <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="download" class="icon-sm me-2"></i> <span class="">Download</span></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="row align-items-start">
-                  <div class="col-md-7">
-                    <p class="text-muted tx-13 mb-3 mb-md-0">Revenue is the income that a business has from its normal business activities, usually from the sale of goods and services to customers.</p>
-                  </div>
-                  <div class="col-md-5 d-flex justify-content-md-end">
-                    <div class="btn-group mb-3 mb-md-0" role="group" aria-label="Basic example">
-                      <button type="button" class="btn btn-outline-primary">Today</button>
-                      <button type="button" class="btn btn-outline-primary d-none d-md-block">Week</button>
-                      <button type="button" class="btn btn-primary">Month</button>
-                      <button type="button" class="btn btn-outline-primary">Year</button>
-                    </div>
-                  </div>
-                </div>
-                <div id="revenueChart" ></div>
-              </div>
-            </div>
-          </div>
-        </div> <!-- row -->
-
-        <div class="row">
-          <div class="col-lg-7 col-xl-8 grid-margin stretch-card">
-            <div class="card">
-              <div class="card-body">
-                <div class="d-flex justify-content-between align-items-baseline mb-2">
-                  <h6 class="card-title mb-0">Monthly sales</h6>
-                  <div class="dropdown mb-2">
-                    <a type="button" id="dropdownMenuButton4" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="icon-lg text-muted pb-3px" data-feather="more-horizontal"></i>
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton4">
-                      <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="eye" class="icon-sm me-2"></i> <span class="">View</span></a>
-                      <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="edit-2" class="icon-sm me-2"></i> <span class="">Edit</span></a>
-                      <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="trash" class="icon-sm me-2"></i> <span class="">Delete</span></a>
-                      <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="printer" class="icon-sm me-2"></i> <span class="">Print</span></a>
-                      <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="download" class="icon-sm me-2"></i> <span class="">Download</span></a>
-                    </div>
-                  </div>
-                </div>
-                <p class="text-muted">Sales are activities related to selling or the number of goods or services sold in a given time period.</p>
-                <div id="monthlySalesChart"></div>
-              </div> 
-            </div>
-          </div>
-          <div class="col-lg-5 col-xl-4 grid-margin stretch-card">
-            <div class="card">
-              <div class="card-body">
-                <div class="d-flex justify-content-between align-items-baseline">
-                  <h6 class="card-title mb-0">Cloud storage</h6>
-                  <div class="dropdown mb-2">
-                    <a type="button" id="dropdownMenuButton5" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="icon-lg text-muted pb-3px" data-feather="more-horizontal"></i>
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton5">
-                      <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="eye" class="icon-sm me-2"></i> <span class="">View</span></a>
-                      <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="edit-2" class="icon-sm me-2"></i> <span class="">Edit</span></a>
-                      <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="trash" class="icon-sm me-2"></i> <span class="">Delete</span></a>
-                      <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="printer" class="icon-sm me-2"></i> <span class="">Print</span></a>
-                      <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="download" class="icon-sm me-2"></i> <span class="">Download</span></a>
-                    </div>
-                  </div>
-                </div>
-                <div id="storageChart"></div>
-                <div class="row mb-3">
-                  <div class="col-6 d-flex justify-content-end">
+          <div class="tab-pane fade" id="calls" role="tabpanel" aria-labelledby="calls-tab">
+            <p class="text-muted mb-1">Recent calls</p>
+            <ul class="list-unstyled chat-list px-1">
+              <li class="chat-item pe-1">
+                <a href="javascript:;" class="d-flex align-items-center">
+                  <figure class="mb-0 me-2">
+                    <img src="<?php echo base_url ('assets/images/faces/face4.jpg'); ?>" class="img-xs rounded-circle" alt="user">
+                    <div class="status online"></div>
+                  </figure>
+                  <div class="d-flex align-items-center justify-content-between flex-grow-1 border-bottom">
                     <div>
-                      <label class="d-flex align-items-center justify-content-end tx-10 text-uppercase fw-bolder">Total storage <span class="p-1 ms-1 rounded-circle bg-secondary"></span></label>
-                      <h5 class="fw-bolder mb-0 text-end">8TB</h5>
+                      <p class="text-body">Jensen Combs</p>
+                      <div class="d-flex align-items-center">
+                        <i data-feather="arrow-up-right" class="icon-sm text-success me-1"></i>
+                        <p class="text-muted tx-13">Today, 03:11 AM</p>
+                      </div>
+                    </div>
+                    <div class="d-flex flex-column align-items-end">
+                      <i data-feather="phone-call" class="text-primary icon-md"></i>
                     </div>
                   </div>
-                  <div class="col-6">
+                </a>
+              </li>
+              <li class="chat-item pe-1">
+                <a href="javascript:;" class="d-flex align-items-center">
+                  <figure class="mb-0 me-2">
+                    <img src="<?php echo base_url ('assets/images/faces/face5.jpg'); ?>" class="img-xs rounded-circle" alt="user">
+                    <div class="status offline"></div>
+                  </figure>
+                  <div class="d-flex align-items-center justify-content-between flex-grow-1 border-bottom">
                     <div>
-                      <label class="d-flex align-items-center tx-10 text-uppercase fw-bolder"><span class="p-1 me-1 rounded-circle bg-primary"></span> Used storage</label>
-                      <h5 class="fw-bolder mb-0">~5TB</h5>
+                      <p class="text-body">Leonardo Payne</p>
+                      <div class="d-flex align-items-center">
+                        <i data-feather="arrow-down-left" class="icon-sm text-success me-1"></i>
+                        <p class="text-muted tx-13">Today, 11:41 AM</p>
+                      </div>
+                    </div>
+                    <div class="d-flex flex-column align-items-end">
+                      <i data-feather="video" class="text-primary icon-md"></i>
                     </div>
                   </div>
-                </div>
-                <div class="d-grid">
-                  <button class="btn btn-primary">Upgrade storage</button>
-                </div>
+                </a>
+              </li>
+              <li class="chat-item pe-1">
+                <a href="javascript:;" class="d-flex align-items-center">
+                  <figure class="mb-0 me-2">
+                    <img src="<?php echo base_url ('assets/images/faces/face6.jpg'); ?>" class="img-xs rounded-circle" alt="user">
+                    <div class="status offline"></div>
+                  </figure>
+                  <div class="d-flex align-items-center justify-content-between flex-grow-1 border-bottom">
+                    <div>
+                      <p class="text-body">Carl Henson</p>
+                      <div class="d-flex align-items-center">
+                        <i data-feather="arrow-down-left" class="icon-sm text-danger me-1"></i>
+                        <p class="text-muted tx-13">Today, 04:24 PM</p>
+                      </div>
+                    </div>
+                    <div class="d-flex flex-column align-items-end">
+                      <i data-feather="phone-call" class="text-primary icon-md"></i>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="chat-item pe-1">
+                <a href="javascript:;" class="d-flex align-items-center">
+                  <figure class="mb-0 me-2">
+                    <img src="<?php echo base_url ('assets/images/faces/face7.jpg'); ?>" class="img-xs rounded-circle" alt="user">
+                    <div class="status online"></div>
+                  </figure>
+                  <div class="d-flex align-items-center justify-content-between flex-grow-1 border-bottom">
+                    <div>
+                      <p class="text-body">Jensen Combs</p>
+                      <div class="d-flex align-items-center">
+                        <i data-feather="arrow-down-left" class="icon-sm text-danger me-1"></i>
+                        <p class="text-muted tx-13">Today, 12:53 AM</p>
+                      </div>
+                    </div>
+                    <div class="d-flex flex-column align-items-end">
+                      <i data-feather="video" class="text-primary icon-md"></i>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="chat-item pe-1">
+                <a href="javascript:;" class="d-flex align-items-center">
+                  <figure class="mb-0 me-2">
+                    <img src="<?php echo base_url ('assets/images/faces/face2.jpg'); ?>" class="img-xs rounded-circle" alt="user">
+                    <div class="status online"></div>
+                  </figure>
+                  <div class="d-flex align-items-center justify-content-between flex-grow-1 border-bottom">
+                    <div>
+                      <p class="text-body">John Doe</p>
+                      <div class="d-flex align-items-center">
+                        <i data-feather="arrow-down-left" class="icon-sm text-success me-1"></i>
+                        <p class="text-muted tx-13">Today, 01:42 AM</p>
+                      </div>
+                    </div>
+                    <div class="d-flex flex-column align-items-end">
+                      <i data-feather="video" class="text-primary icon-md"></i>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="chat-item pe-1">
+                <a href="javascript:;" class="d-flex align-items-center">
+                  <figure class="mb-0 me-2">
+                    <img src="<?php echo base_url ('assets/images/faces/face3.jpg'); ?>" class="img-xs rounded-circle" alt="user">
+                    <div class="status offline"></div>
+                  </figure>
+                  <div class="d-flex align-items-center justify-content-between flex-grow-1 border-bottom">
+                    <div>
+                      <p class="text-body">John Doe</p>
+                      <div class="d-flex align-items-center">
+                        <i data-feather="arrow-up-right" class="icon-sm text-success me-1"></i>
+                        <p class="text-muted tx-13">Today, 12:01 AM</p>
+                      </div>
+                    </div>
+                    <div class="d-flex flex-column align-items-end">
+                      <i data-feather="phone-call" class="text-primary icon-md"></i>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="tab-pane fade" id="contacts" role="tabpanel" aria-labelledby="contacts-tab">
+            <p class="text-muted mb-1">Contacts</p>
+            <ul class="list-unstyled chat-list px-1">
+              <li class="chat-item pe-1">
+                <a href="javascript:;" class="d-flex align-items-center">
+                  <figure class="mb-0 me-2">
+                    <img src="<?php echo base_url ('assets/images/faces/face2.jpg'); ?>" class="img-xs rounded-circle" alt="user">
+                    <div class="status offline"></div>
+                  </figure>
+                  <div class="d-flex align-items-center justify-content-between flex-grow-1 border-bottom">
+                    <div>
+                      <p class="text-body">Amiah Burton</p>
+                      <div class="d-flex align-items-center">
+                        <p class="text-muted tx-13">Front-end Developer</p>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-end text-body">
+                      <i data-feather="message-square" class="icon-md text-primary me-2"></i>
+                      <i data-feather="phone-call" class="icon-md text-primary me-2"></i>
+                      <i data-feather="video" class="icon-md text-primary"></i>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="chat-item pe-1">
+                <a href="javascript:;" class="d-flex align-items-center">
+                  <figure class="mb-0 me-2">
+                    <img src="<?php echo base_url ('assets/images/faces/face3.jpg'); ?>" class="img-xs rounded-circle" alt="user">
+                    <div class="status online"></div>
+                  </figure>
+                  <div class="d-flex align-items-center justify-content-between flex-grow-1 border-bottom">
+                    <div>
+                      <p class="text-body">John Doe</p>
+                      <div class="d-flex align-items-center">
+                        <p class="text-muted tx-13">Back-end Developer</p>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-end text-body">
+                      <i data-feather="message-square" class="icon-md text-primary me-2"></i>
+                      <i data-feather="phone-call" class="icon-md text-primary me-2"></i>
+                      <i data-feather="video" class="icon-md text-primary"></i>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="chat-item pe-1">
+                <a href="javascript:;" class="d-flex align-items-center">
+                  <figure class="mb-0 me-2">
+                    <img src="<?php echo base_url ('assets/images/faces/face4.jpg'); ?>" class="img-xs rounded-circle" alt="user">
+                    <div class="status offline"></div>
+                  </figure>
+                  <div class="d-flex align-items-center justify-content-between flex-grow-1 border-bottom">
+                    <div>
+                      <p class="text-body">Yaretzi Mayo</p>
+                      <div class="d-flex align-items-center">
+                        <p class="text-muted tx-13">Fullstack Developer</p>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-end text-body">
+                      <i data-feather="message-square" class="icon-md text-primary me-2"></i>
+                      <i data-feather="phone-call" class="icon-md text-primary me-2"></i>
+                      <i data-feather="video" class="icon-md text-primary"></i>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="chat-item pe-1">
+                <a href="javascript:;" class="d-flex align-items-center">
+                  <figure class="mb-0 me-2">
+                    <img src="<?php echo base_url ('assets/images/faces/face5.jpg'); ?>" class="img-xs rounded-circle" alt="user">
+                    <div class="status offline"></div>
+                  </figure>
+                  <div class="d-flex align-items-center justify-content-between flex-grow-1 border-bottom">
+                    <div>
+                      <p class="text-body">John Doe</p>
+                      <div class="d-flex align-items-center">
+                        <p class="text-muted tx-13">Front-end Developer</p>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-end text-body">
+                      <i data-feather="message-square" class="icon-md text-primary me-2"></i>
+                      <i data-feather="phone-call" class="icon-md text-primary me-2"></i>
+                      <i data-feather="video" class="icon-md text-primary"></i>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-8 chat-content">
+    <div class="chat-header border-bottom pb-2">
+      <div class="d-flex justify-content-between">
+        <div class="d-flex align-items-center">
+          <i data-feather="corner-up-left" id="backToChatList" class="icon-lg me-2 ms-n2 text-muted d-lg-none"></i>
+          <figure class="mb-0 me-2">
+            <img src="<?php echo base_url ('assets/images/faces/face2.jpg'); ?>" class="img-sm rounded-circle" alt="image">
+            <div class="status online"></div>
+            <div class="status online"></div>
+          </figure>
+          <div>
+            <p>Mariana Zenha</p>
+            <p class="text-muted tx-13">Front-end Developer</p>
+          </div>
+        </div>
+        <div class="d-flex align-items-center me-n1">
+          <a class="me-3" type="button" data-bs-toggle="tooltip" data-bs-title="Start video call">
+            <i data-feather="video" class="icon-lg text-muted"></i>
+          </a>
+          <a class="me-0 me-sm-3" data-bs-toggle="tooltip" data-bs-title="Start voice call" type="button">
+            <i data-feather="phone-call" class="icon-lg text-muted"></i>
+          </a>
+          <a type="button" class="d-none d-sm-block"  data-bs-toggle="tooltip" data-bs-title="Add to contacts">
+            <i data-feather="user-plus" class="icon-lg text-muted"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="chat-body">
+      <ul class="messages">
+        <li class="message-item friend">
+          <img src="<?php echo base_url ('assets/images/faces/face2.jpg'); ?>" class="img-xs rounded-circle" alt="avatar">
+          <div class="content">
+            <div class="message">
+              <div class="bubble">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+              </div>
+              <span>8:12 PM</span>
+            </div>
+          </div>
+        </li>
+        <li class="message-item me">
+          <img src="<?php echo base_url ('assets/images/faces/face1.jpg'); ?>" class="img-xs rounded-circle" alt="avatar">
+          <div class="content">
+            <div class="message">
+              <div class="bubble">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry printing and typesetting industry.</p>
               </div>
             </div>
+            <div class="message">
+              <div class="bubble">
+                <p>Lorem Ipsum.</p>
+              </div>
+              <span>8:13 PM</span>
+            </div>
           </div>
-        </div> <!-- row -->
-
-        <div class="row">
-          <div class="col-lg-5 col-xl-4 grid-margin grid-margin-xl-0 stretch-card">
-            <div class="card">
-              <div class="card-body">
-                <div class="d-flex justify-content-between align-items-baseline mb-2">
-                  <h6 class="card-title mb-0">Inbox</h6>
-                  <div class="dropdown mb-2">
-                    <a type="button" id="dropdownMenuButton6" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="icon-lg text-muted pb-3px" data-feather="more-horizontal"></i>
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton6">
-                      <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="eye" class="icon-sm me-2"></i> <span class="">View</span></a>
-                      <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="edit-2" class="icon-sm me-2"></i> <span class="">Edit</span></a>
-                      <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="trash" class="icon-sm me-2"></i> <span class="">Delete</span></a>
-                      <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="printer" class="icon-sm me-2"></i> <span class="">Print</span></a>
-                      <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="download" class="icon-sm me-2"></i> <span class="">Download</span></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="d-flex flex-column">
-                  <a href="javascript:;" class="d-flex align-items-center border-bottom pb-3">
-                    <div class="me-3">
-                      <img src="<?php echo base_url ('assets/images/faces/face2.jpg'); ?>" class="rounded-circle wd-35" alt="user">
-                    </div>
-                    <div class="w-100">
-                      <div class="d-flex justify-content-between">
-                        <h6 class="text-body mb-2">Leonardo Payne</h6>
-                        <p class="text-muted tx-12">12.30 PM</p>
-                      </div>
-                      <p class="text-muted tx-13">Hey! there I'm available...</p>
-                    </div>
-                  </a>
-                  <a href="javascript:;" class="d-flex align-items-center border-bottom py-3">
-                    <div class="me-3">
-                      <img src="<?php echo base_url ('assets/images/faces/face3.jpg'); ?>" class="rounded-circle wd-35" alt="user">
-                    </div>
-                    <div class="w-100">
-                      <div class="d-flex justify-content-between">
-                        <h6 class="text-body mb-2">Carl Henson</h6>
-                        <p class="text-muted tx-12">02.14 AM</p>
-                      </div>
-                      <p class="text-muted tx-13">I've finished it! See you so..</p>
-                    </div>
-                  </a>
-                  <a href="javascript:;" class="d-flex align-items-center border-bottom py-3">
-                    <div class="me-3">
-                      <img src="<?php echo base_url ('assets/images/faces/face4.jpg'); ?>" class="rounded-circle wd-35" alt="user">
-                    </div>
-                    <div class="w-100">
-                      <div class="d-flex justify-content-between">
-                        <h6 class="text-body mb-2">Jensen Combs</h6>
-                        <p class="text-muted tx-12">08.22 PM</p>
-                      </div>
-                      <p class="text-muted tx-13">This template is awesome!</p>
-                    </div>
-                  </a>
-                  <a href="javascript:;" class="d-flex align-items-center border-bottom py-3">
-                    <div class="me-3">
-                      <img src="<?php echo base_url ('assets/images/faces/face5.jpg'); ?>" class="rounded-circle wd-35" alt="user">
-                    </div>
-                    <div class="w-100">
-                      <div class="d-flex justify-content-between">
-                        <h6 class="text-body mb-2">Amiah Burton</h6>
-                        <p class="text-muted tx-12">05.49 AM</p>
-                      </div>
-                      <p class="text-muted tx-13">Nice to meet you</p>
-                    </div>
-                  </a>
-                  <a href="javascript:;" class="d-flex align-items-center border-bottom py-3">
-                    <div class="me-3">
-                      <img src="<?php echo base_url ('assets/images/faces/face6.jpg'); ?>" class="rounded-circle wd-35" alt="user">
-                    </div>
-                    <div class="w-100">
-                      <div class="d-flex justify-content-between">
-                        <h6 class="text-body mb-2">Yaretzi Mayo</h6>
-                        <p class="text-muted tx-12">01.19 AM</p>
-                      </div>
-                      <p class="text-muted tx-13">Hey! there I'm available...</p>
-                    </div>
-                  </a>
-                </div>
+        </li>
+        <li class="message-item friend">
+          <img src="<?php echo base_url ('assets/images/faces/face2.jpg'); ?>" class="img-xs rounded-circle" alt="avatar">
+          <div class="content">
+            <div class="message">
+              <div class="bubble">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+              </div>
+              <span>8:15 PM</span>
+            </div>
+          </div>
+        </li>
+        <li class="message-item me">
+          <img src="<?php echo base_url ('assets/images/faces/face1.jpg'); ?>" class="img-xs rounded-circle" alt="avatar">
+          <div class="content">
+            <div class="message">
+              <div class="bubble">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry printing and typesetting industry.</p>
+              </div>
+              <span>8:15 PM</span>
+            </div>
+          </div>
+        </li>
+        <li class="message-item friend">
+          <img src="<?php echo base_url ('assets/images/faces/face2.jpg'); ?>" class="img-xs rounded-circle" alt="avatar">
+          <div class="content">
+            <div class="message">
+              <div class="bubble">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+              </div>
+              <span>8:17 PM</span>
+            </div>
+          </div>
+        </li>
+        <li class="message-item me">
+          <img src="<?php echo base_url ('assets/images/faces/face1.jpg'); ?>" class="img-xs rounded-circle" alt="avatar">
+          <div class="content">
+            <div class="message">
+              <div class="bubble">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry printing and typesetting industry.</p>
               </div>
             </div>
-          </div>
-          <div class="col-lg-7 col-xl-8 stretch-card">
-            <div class="card">
-              <div class="card-body">
-                <div class="d-flex justify-content-between align-items-baseline mb-2">
-                  <h6 class="card-title mb-0">Projects</h6>
-                  <div class="dropdown mb-2">
-                    <a type="button" id="dropdownMenuButton7" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="icon-lg text-muted pb-3px" data-feather="more-horizontal"></i>
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton7">
-                      <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="eye" class="icon-sm me-2"></i> <span class="">View</span></a>
-                      <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="edit-2" class="icon-sm me-2"></i> <span class="">Edit</span></a>
-                      <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="trash" class="icon-sm me-2"></i> <span class="">Delete</span></a>
-                      <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="printer" class="icon-sm me-2"></i> <span class="">Print</span></a>
-                      <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="download" class="icon-sm me-2"></i> <span class="">Download</span></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="table-responsive">
-                  <table class="table table-hover mb-0">
-                    <thead>
-                      <tr>
-                        <th class="pt-0">#</th>
-                        <th class="pt-0">Project Name</th>
-                        <th class="pt-0">Start Date</th>
-                        <th class="pt-0">Due Date</th>
-                        <th class="pt-0">Status</th>
-                        <th class="pt-0">Assign</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>NobleUI jQuery</td>
-                        <td>01/01/2022</td>
-                        <td>26/04/2022</td>
-                        <td><span class="badge bg-danger">Released</span></td>
-                        <td>Leonardo Payne</td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td>NobleUI Angular</td>
-                        <td>01/01/2022</td>
-                        <td>26/04/2022</td>
-                        <td><span class="badge bg-success">Review</span></td>
-                        <td>Carl Henson</td>
-                      </tr>
-                      <tr>
-                        <td>3</td>
-                        <td>NobleUI ReactJs</td>
-                        <td>01/05/2022</td>
-                        <td>10/09/2022</td>
-                        <td><span class="badge bg-info">Pending</span></td>
-                        <td>Jensen Combs</td>
-                      </tr>
-                      <tr>
-                        <td>4</td>
-                        <td>NobleUI VueJs</td>
-                        <td>01/01/2022</td>
-                        <td>31/11/2022</td>
-                        <td><span class="badge bg-warning">Work in Progress</span>
-                        </td>
-                        <td>Amiah Burton</td>
-                      </tr>
-                      <tr>
-                        <td>5</td>
-                        <td>NobleUI Laravel</td>
-                        <td>01/01/2022</td>
-                        <td>31/12/2022</td>
-                        <td><span class="badge bg-danger">Coming soon</span></td>
-                        <td>Yaretzi Mayo</td>
-                      </tr>
-                      <tr>
-                        <td>6</td>
-                        <td>NobleUI NodeJs</td>
-                        <td>01/01/2022</td>
-                        <td>31/12/2022</td>
-                        <td><span class="badge bg-primary">Coming soon</span></td>
-                        <td>Carl Henson</td>
-                      </tr>
-                      <tr>
-                        <td class="border-bottom">3</td>
-                        <td class="border-bottom">NobleUI EmberJs</td>
-                        <td class="border-bottom">01/05/2022</td>
-                        <td class="border-bottom">10/11/2022</td>
-                        <td class="border-bottom"><span class="badge bg-info">Pending</span></td>
-                        <td class="border-bottom">Jensen Combs</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div> 
+            <div class="message">
+              <div class="bubble">
+                <p>Lorem Ipsum.</p>
+              </div>
+              <span>8:18 PM</span>
             </div>
           </div>
-        </div> <!-- row -->
-
-			</div>
-
-			<!-- partial:partials/_footer.html -->
-			<footer class="footer d-flex flex-column flex-md-row align-items-center justify-content-between px-4 py-3 border-top small">
-				<p class="text-muted mb-1 mb-md-0">Copyright © 2022 <a href="https://www.nobleui.com/" target="_blank">NobleUI</a>.</p>
-				<p class="text-muted">Handcrafted With <i class="mb-1 text-primary ms-1 icon-sm" data-feather="heart"></i></p>
-			</footer>
-			<!-- partial -->
-		
-		</div>
-	</div>
+        </li>
+        <li class="message-item friend">
+          <img src="<?php echo base_url ('assets/images/faces/face2.jpg'); ?>" class="img-xs rounded-circle" alt="avatar">
+          <div class="content">
+            <div class="message">
+              <div class="bubble">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+              </div>
+              <span>8:22 PM</span>
+            </div>
+          </div>
+        </li>
+        <li class="message-item me">
+          <img src="<?php echo base_url ('assets/images/faces/face1.jpg'); ?>" class="img-xs rounded-circle" alt="avatar">
+          <div class="content">
+            <div class="message">
+              <div class="bubble">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry printing and typesetting industry.</p>
+              </div>
+              <span>8:30 PM</span>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="chat-footer d-flex">
+      <div>
+        <button type="button" class="btn border btn-icon rounded-circle me-2" data-bs-toggle="tooltip" data-bs-title="Emoji">
+          <i data-feather="smile" class="text-muted"></i>
+        </button>
+      </div>
+      <div class="d-none d-md-block">
+        <button type="button" class="btn border btn-icon rounded-circle me-2" data-bs-toggle="tooltip" data-bs-title="Attatch files">
+          <i data-feather="paperclip" class="text-muted"></i>
+        </button>
+      </div>
+      <div class="d-none d-md-block">
+        <button type="button" class="btn border btn-icon rounded-circle me-2" data-bs-toggle="tooltip" data-bs-title="Record you voice">
+          <i data-feather="mic" class="text-muted"></i>
+        </button>
+      </div>
+      <form class="search-form flex-grow-1 me-2">
+        <div class="input-group">
+          <input type="text" class="form-control rounded-pill" id="chatForm" placeholder="Type a message">
+        </div>
+      </form>
+      <div>
+        <button type="button" class="btn btn-primary btn-icon rounded-circle">
+          <i data-feather="send"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+    </div>
+</div>
+</div>
 
 	<!-- core:js -->
 	<script src="<?php echo base_url ('assets/vendors/core/core.js'); ?>"></script>
