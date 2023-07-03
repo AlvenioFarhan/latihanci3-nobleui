@@ -10,7 +10,7 @@ License: For each use you must have a valid license purchased only from above li
 -->
 <html lang="en">
 
-<!-- Mirrored from www.nobleui.com/html/template/demo1/pages/email/read.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 10 Jun 2023 11:55:43 GMT -->
+<!-- Mirrored from www.nobleui.com/html/template/demo1/dashboard.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 10 Jun 2023 11:55:23 GMT -->
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,36 +22,37 @@ License: For each use you must have a valid license purchased only from above li
 	<title>NobleUI - HTML Bootstrap 5 Admin Dashboard Template</title>
 
   <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com/">
-  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet">
+  <link rel="preconnect" href="<?php echo base_url ('https://fonts.googleapis.com/'); ?>">
+  <link rel="preconnect" href="<?php echo base_url ('https://fonts.gstatic.com/" crossorigin'); ?>">
+  <link href="<?php echo base_url ('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&amp;display=swap'); ?>" rel="stylesheet">
   <!-- End fonts -->
 
 	<!-- core:css -->
-	<link rel="stylesheet" href="../../../assets/vendors/core/core.css">
+	<link rel="stylesheet" href="<?php echo base_url ('assets/vendors/core/core.css'); ?>">
 	<!-- endinject -->
 
 	<!-- Plugin css for this page -->
+  <link rel="stylesheet" href="<?php echo base_url ('assets/vendors/flatpickr/flatpickr.min.css'); ?>">
 	<!-- End plugin css for this page -->
 
 	<!-- inject:css -->
-	<link rel="stylesheet" href="../../../assets/fonts/feather-font/css/iconfont.css">
-	<link rel="stylesheet" href="../../../assets/vendors/flag-icon-css/css/flag-icon.min.css">
+	<link rel="stylesheet" href="<?php echo base_url ('assets/fonts/feather-font/css/iconfont.css'); ?>">
+	<link rel="stylesheet" href="<?php echo base_url ('assets/vendors/flag-icon-css/css/flag-icon.min.css'); ?>">
 	<!-- endinject -->
 
   <!-- Layout styles -->  
-	<link rel="stylesheet" href="../../../assets/css/demo1/style.min.css">
+	<link rel="stylesheet" href="<?php echo base_url ('assets/css/demo1/style.min.css'); ?>">
   <!-- End layout styles -->
 
-  <link rel="shortcut icon" href="../../../assets/images/favicon.png" />
+  <link rel="shortcut icon" href="<?php echo base_url ('assets/images/favicon.png'); ?>" />
 </head>
 <body>
 	<div class="main-wrapper">
 
-		<!-- partial:../../partials/_sidebar.html -->
+		<!-- partial:partials/_sidebar.html -->
 		<nav class="sidebar">
       <div class="sidebar-header">
-        <a href="#" class="sidebar-brand">
+        <a href="<?php echo base_url () ; ?>" class="sidebar-brand">
           Noble<span>UI</span>
         </a>
         <div class="sidebar-toggler not-active">
@@ -64,7 +65,7 @@ License: For each use you must have a valid license purchased only from above li
         <ul class="nav">
           <li class="nav-item nav-category">Main</li>
           <li class="nav-item">
-            <a href="../../dashboard.html" class="nav-link">
+            <a href="<?php echo base_url (); ?>" class="nav-link">
               <i class="link-icon" data-feather="box"></i>
               <span class="link-title">Dashboard</span>
             </a>
@@ -79,25 +80,25 @@ License: For each use you must have a valid license purchased only from above li
             <div class="collapse" id="emails">
               <ul class="nav sub-menu">
                 <li class="nav-item">
-                  <a href="inbox.html" class="nav-link">Inbox</a>
+                  <a href="<?php echo base_url ('email/inbox'); ?>" class="nav-link">Inbox</a>
                 </li>
                 <li class="nav-item">
-                  <a href="read.html" class="nav-link">Read</a>
+                  <a href="<?php echo base_url ('email/read'); ?>" class="nav-link">Read</a>
                 </li>
                 <li class="nav-item">
-                  <a href="compose.html" class="nav-link">Compose</a>
+                  <a href="<?php echo base_url ('email/compose'); ?>" class="nav-link">Compose</a>
                 </li>
               </ul>
             </div>
           </li>
           <li class="nav-item">
-            <a href="../apps/chat.html" class="nav-link">
+            <a href="pages/apps/chat.html" class="nav-link">
               <i class="link-icon" data-feather="message-square"></i>
               <span class="link-title">Chat</span>
             </a>
           </li>
           <li class="nav-item">
-            <a href="../apps/calendar.html" class="nav-link">
+            <a href="pages/apps/calendar.html" class="nav-link">
               <i class="link-icon" data-feather="calendar"></i>
               <span class="link-title">Calendar</span>
             </a>
@@ -112,73 +113,73 @@ License: For each use you must have a valid license purchased only from above li
             <div class="collapse" id="uiComponents">
               <ul class="nav sub-menu">
                 <li class="nav-item">
-                  <a href="../ui-components/accordion.html" class="nav-link">Accordion</a>
+                  <a href="pages/ui-components/accordion.html" class="nav-link">Accordion</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../ui-components/alerts.html" class="nav-link">Alerts</a>
+                  <a href="pages/ui-components/alerts.html" class="nav-link">Alerts</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../ui-components/badges.html" class="nav-link">Badges</a>
+                  <a href="pages/ui-components/badges.html" class="nav-link">Badges</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../ui-components/breadcrumbs.html" class="nav-link">Breadcrumbs</a>
+                  <a href="pages/ui-components/breadcrumbs.html" class="nav-link">Breadcrumbs</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../ui-components/buttons.html" class="nav-link">Buttons</a>
+                  <a href="pages/ui-components/buttons.html" class="nav-link">Buttons</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../ui-components/button-group.html" class="nav-link">Button group</a>
+                  <a href="pages/ui-components/button-group.html" class="nav-link">Button group</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../ui-components/cards.html" class="nav-link">Cards</a>
+                  <a href="pages/ui-components/cards.html" class="nav-link">Cards</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../ui-components/carousel.html" class="nav-link">Carousel</a>
+                  <a href="pages/ui-components/carousel.html" class="nav-link">Carousel</a>
                 </li>
                 <li class="nav-item">
-                    <a href="../ui-components/collapse.html" class="nav-link">Collapse</a>
+                    <a href="pages/ui-components/collapse.html" class="nav-link">Collapse</a>
                   </li>
                 <li class="nav-item">
-                  <a href="../ui-components/dropdowns.html" class="nav-link">Dropdowns</a>
+                  <a href="pages/ui-components/dropdowns.html" class="nav-link">Dropdowns</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../ui-components/list-group.html" class="nav-link">List group</a>
+                  <a href="pages/ui-components/list-group.html" class="nav-link">List group</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../ui-components/media-object.html" class="nav-link">Media object</a>
+                  <a href="pages/ui-components/media-object.html" class="nav-link">Media object</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../ui-components/modal.html" class="nav-link">Modal</a>
+                  <a href="pages/ui-components/modal.html" class="nav-link">Modal</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../ui-components/navs.html" class="nav-link">Navs</a>
+                  <a href="pages/ui-components/navs.html" class="nav-link">Navs</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../ui-components/navbar.html" class="nav-link">Navbar</a>
+                  <a href="pages/ui-components/navbar.html" class="nav-link">Navbar</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../ui-components/pagination.html" class="nav-link">Pagination</a>
+                  <a href="pages/ui-components/pagination.html" class="nav-link">Pagination</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../ui-components/popover.html" class="nav-link">Popovers</a>
+                  <a href="pages/ui-components/popover.html" class="nav-link">Popovers</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../ui-components/progress.html" class="nav-link">Progress</a>
+                  <a href="pages/ui-components/progress.html" class="nav-link">Progress</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../ui-components/scrollbar.html" class="nav-link">Scrollbar</a>
+                  <a href="pages/ui-components/scrollbar.html" class="nav-link">Scrollbar</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../ui-components/scrollspy.html" class="nav-link">Scrollspy</a>
+                  <a href="pages/ui-components/scrollspy.html" class="nav-link">Scrollspy</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../ui-components/spinners.html" class="nav-link">Spinners</a>
+                  <a href="pages/ui-components/spinners.html" class="nav-link">Spinners</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../ui-components/tabs.html" class="nav-link">Tabs</a>
+                  <a href="pages/ui-components/tabs.html" class="nav-link">Tabs</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../ui-components/tooltips.html" class="nav-link">Tooltips</a>
+                  <a href="pages/ui-components/tooltips.html" class="nav-link">Tooltips</a>
                 </li>
               </ul>
             </div>
@@ -192,16 +193,16 @@ License: For each use you must have a valid license purchased only from above li
             <div class="collapse" id="advancedUI">
               <ul class="nav sub-menu">
                 <li class="nav-item">
-                  <a href="../advanced-ui/cropper.html" class="nav-link">Cropper</a>
+                  <a href="pages/advanced-ui/cropper.html" class="nav-link">Cropper</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../advanced-ui/owl-carousel.html" class="nav-link">Owl carousel</a>
+                  <a href="pages/advanced-ui/owl-carousel.html" class="nav-link">Owl carousel</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../advanced-ui/sortablejs.html" class="nav-link">SortableJs</a>
+                  <a href="pages/advanced-ui/sortablejs.html" class="nav-link">SortableJs</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../advanced-ui/sweet-alert.html" class="nav-link">Sweet Alert</a>
+                  <a href="pages/advanced-ui/sweet-alert.html" class="nav-link">Sweet Alert</a>
                 </li>
               </ul>
             </div>
@@ -215,16 +216,16 @@ License: For each use you must have a valid license purchased only from above li
             <div class="collapse" id="forms">
               <ul class="nav sub-menu">
                 <li class="nav-item">
-                  <a href="../forms/basic-elements.html" class="nav-link">Basic Elements</a>
+                  <a href="pages/forms/basic-elements.html" class="nav-link">Basic Elements</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../forms/advanced-elements.html" class="nav-link">Advanced Elements</a>
+                  <a href="pages/forms/advanced-elements.html" class="nav-link">Advanced Elements</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../forms/editors.html" class="nav-link">Editors</a>
+                  <a href="pages/forms/editors.html" class="nav-link">Editors</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../forms/wizard.html" class="nav-link">Wizard</a>
+                  <a href="pages/forms/wizard.html" class="nav-link">Wizard</a>
                 </li>
               </ul>
             </div>
@@ -238,19 +239,19 @@ License: For each use you must have a valid license purchased only from above li
             <div class="collapse" id="charts">
               <ul class="nav sub-menu">
                 <li class="nav-item">
-                  <a href="../charts/apex.html" class="nav-link">Apex</a>
+                  <a href="pages/charts/apex.html" class="nav-link">Apex</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../charts/chartjs.html" class="nav-link">ChartJs</a>
+                  <a href="pages/charts/chartjs.html" class="nav-link">ChartJs</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../charts/flot.html" class="nav-link">Flot</a>
+                  <a href="pages/charts/flot.html" class="nav-link">Flot</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../charts/peity.html" class="nav-link">Peity</a>
+                  <a href="pages/charts/peity.html" class="nav-link">Peity</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../charts/sparkline.html" class="nav-link">Sparkline</a>
+                  <a href="pages/charts/sparkline.html" class="nav-link">Sparkline</a>
                 </li>
               </ul>
             </div>
@@ -264,10 +265,10 @@ License: For each use you must have a valid license purchased only from above li
             <div class="collapse" id="tables">
               <ul class="nav sub-menu">
                 <li class="nav-item">
-                  <a href="../tables/basic-table.html" class="nav-link">Basic Tables</a>
+                  <a href="pages/tables/basic-table.html" class="nav-link">Basic Tables</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../tables/data-table.html" class="nav-link">Data Table</a>
+                  <a href="pages/tables/data-table.html" class="nav-link">Data Table</a>
                 </li>
               </ul>
             </div>
@@ -281,13 +282,13 @@ License: For each use you must have a valid license purchased only from above li
             <div class="collapse" id="icons">
               <ul class="nav sub-menu">
                 <li class="nav-item">
-                  <a href="../icons/feather-icons.html" class="nav-link">Feather Icons</a>
+                  <a href="pages/icons/feather-icons.html" class="nav-link">Feather Icons</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../icons/flag-icons.html" class="nav-link">Flag Icons</a>
+                  <a href="pages/icons/flag-icons.html" class="nav-link">Flag Icons</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../icons/mdi-icons.html" class="nav-link">Mdi Icons</a>
+                  <a href="pages/icons/mdi-icons.html" class="nav-link">Mdi Icons</a>
                 </li>
               </ul>
             </div>
@@ -302,22 +303,22 @@ License: For each use you must have a valid license purchased only from above li
             <div class="collapse" id="general-pages">
               <ul class="nav sub-menu">
                 <li class="nav-item">
-                  <a href="../general/blank-page.html" class="nav-link">Blank page</a>
+                  <a href="pages/general/blank-page.html" class="nav-link">Blank page</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../general/faq.html" class="nav-link">Faq</a>
+                  <a href="pages/general/faq.html" class="nav-link">Faq</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../general/invoice.html" class="nav-link">Invoice</a>
+                  <a href="pages/general/invoice.html" class="nav-link">Invoice</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../general/profile.html" class="nav-link">Profile</a>
+                  <a href="pages/general/profile.html" class="nav-link">Profile</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../general/pricing.html" class="nav-link">Pricing</a>
+                  <a href="pages/general/pricing.html" class="nav-link">Pricing</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../general/timeline.html" class="nav-link">Timeline</a>
+                  <a href="pages/general/timeline.html" class="nav-link">Timeline</a>
                 </li>
               </ul>
             </div>
@@ -331,10 +332,10 @@ License: For each use you must have a valid license purchased only from above li
             <div class="collapse" id="authPages">
               <ul class="nav sub-menu">
                 <li class="nav-item">
-                  <a href="../auth/login.html" class="nav-link">Login</a>
+                  <a href="pages/auth/login.html" class="nav-link">Login</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../auth/register.html" class="nav-link">Register</a>
+                  <a href="pages/auth/register.html" class="nav-link">Register</a>
                 </li>
               </ul>
             </div>
@@ -348,10 +349,10 @@ License: For each use you must have a valid license purchased only from above li
             <div class="collapse" id="errorPages">
               <ul class="nav sub-menu">
                 <li class="nav-item">
-                  <a href="../error/404.html" class="nav-link">404</a>
+                  <a href="pages/error/404.html" class="nav-link">404</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../error/500.html" class="nav-link">500</a>
+                  <a href="pages/error/500.html" class="nav-link">500</a>
                 </li>
               </ul>
             </div>
@@ -388,12 +389,12 @@ License: For each use you must have a valid license purchased only from above li
         </div>
         <div class="theme-wrapper">
           <h6 class="text-muted mb-2">Light Theme:</h6>
-          <a class="theme-item active" href="../../dashboard.html">
-            <img src="../../../assets/images/screenshots/light.jpg" alt="light theme">
+          <a class="theme-item active" href="dashboard.html">
+            <img src="<?php echo base_url ('assets/images/screenshots/light.jpg'); ?>" alt="light theme">
           </a>
           <h6 class="text-muted mb-2">Dark Theme:</h6>
           <a class="theme-item" href="https://www.nobleui.com/html/template/demo2/dashboard.html">
-            <img src="../../../assets/images/screenshots/dark.jpg" alt="light theme">
+            <img src="<?php echo base_url ('assets/images/screenshots/dark.jpg'); ?>" alt="light theme">
           </a>
         </div>
       </div>
@@ -401,8 +402,8 @@ License: For each use you must have a valid license purchased only from above li
 		<!-- partial -->
 	
 		<div class="page-wrapper">
-				
-			<!-- partial:../../partials/_navbar.html -->
+					
+			<!-- partial:partials/_navbar.html -->
 			<nav class="navbar">
 				<a href="#" class="sidebar-toggler">
 					<i data-feather="menu"></i>
@@ -440,16 +441,16 @@ License: For each use you must have a valid license purchased only from above li
 								</div>
                 <div class="row g-0 p-1">
                   <div class="col-3 text-center">
-                    <a href="../apps/chat.html" class="dropdown-item d-flex flex-column align-items-center justify-content-center wd-70 ht-70"><i data-feather="message-square" class="icon-lg mb-1"></i><p class="tx-12">Chat</p></a>
+                    <a href="pages/apps/chat.html" class="dropdown-item d-flex flex-column align-items-center justify-content-center wd-70 ht-70"><i data-feather="message-square" class="icon-lg mb-1"></i><p class="tx-12">Chat</p></a>
                   </div>
                   <div class="col-3 text-center">
-                    <a href="../apps/calendar.html" class="dropdown-item d-flex flex-column align-items-center justify-content-center wd-70 ht-70"><i data-feather="calendar" class="icon-lg mb-1"></i><p class="tx-12">Calendar</p></a>
+                    <a href="pages/apps/calendar.html" class="dropdown-item d-flex flex-column align-items-center justify-content-center wd-70 ht-70"><i data-feather="calendar" class="icon-lg mb-1"></i><p class="tx-12">Calendar</p></a>
                   </div>
                   <div class="col-3 text-center">
-                    <a href="inbox.html" class="dropdown-item d-flex flex-column align-items-center justify-content-center wd-70 ht-70"><i data-feather="mail" class="icon-lg mb-1"></i><p class="tx-12">Email</p></a>
+                    <a href="pages/email/inbox.html" class="dropdown-item d-flex flex-column align-items-center justify-content-center wd-70 ht-70"><i data-feather="mail" class="icon-lg mb-1"></i><p class="tx-12">Email</p></a>
                   </div>
                   <div class="col-3 text-center">
-                    <a href="../general/profile.html" class="dropdown-item d-flex flex-column align-items-center justify-content-center wd-70 ht-70"><i data-feather="instagram" class="icon-lg mb-1"></i><p class="tx-12">Profile</p></a>
+                    <a href="pages/general/profile.html" class="dropdown-item d-flex flex-column align-items-center justify-content-center wd-70 ht-70"><i data-feather="instagram" class="icon-lg mb-1"></i><p class="tx-12">Profile</p></a>
                   </div>
                 </div>
 								<div class="px-3 py-2 d-flex align-items-center justify-content-center border-top">
@@ -469,7 +470,7 @@ License: For each use you must have a valid license purchased only from above li
                 <div class="p-1">
                   <a href="javascript:;" class="dropdown-item d-flex align-items-center py-2">
                     <div class="me-3">
-                      <img class="wd-30 ht-30 rounded-circle" src="../../../assets/images/faces/face2.jpg" alt="userr">
+                      <img class="wd-30 ht-30 rounded-circle" src="<?php echo base_url ('assets/images/faces/face2.jpg'); ?>" alt="userr">
                     </div>
                     <div class="d-flex justify-content-between flex-grow-1">
                       <div class="me-4">
@@ -481,7 +482,7 @@ License: For each use you must have a valid license purchased only from above li
                   </a>
                   <a href="javascript:;" class="dropdown-item d-flex align-items-center py-2">
                     <div class="me-3">
-                      <img class="wd-30 ht-30 rounded-circle" src="../../../assets/images/faces/face3.jpg" alt="userr">
+                      <img class="wd-30 ht-30 rounded-circle" src="<?php echo base_url ('assets/images/faces/face3.jpg'); ?>" alt="userr">
                     </div>
                     <div class="d-flex justify-content-between flex-grow-1">
                       <div class="me-4">
@@ -493,7 +494,7 @@ License: For each use you must have a valid license purchased only from above li
                   </a>
                   <a href="javascript:;" class="dropdown-item d-flex align-items-center py-2">
                     <div class="me-3">
-                      <img class="wd-30 ht-30 rounded-circle" src="../../../assets/images/faces/face4.jpg" alt="userr">
+                      <img class="wd-30 ht-30 rounded-circle" src="<?php echo base_url ('assets/images/faces/face4.jpg'); ?>" alt="userr">
                     </div>
                     <div class="d-flex justify-content-between flex-grow-1">
                       <div class="me-4">
@@ -505,7 +506,7 @@ License: For each use you must have a valid license purchased only from above li
                   </a>
                   <a href="javascript:;" class="dropdown-item d-flex align-items-center py-2">
                     <div class="me-3">
-                      <img class="wd-30 ht-30 rounded-circle" src="../../../assets/images/faces/face5.jpg" alt="userr">
+                      <img class="wd-30 ht-30 rounded-circle" src="<?php echo base_url ('assets/images/faces/face5.jpg'); ?>" alt="userr">
                     </div>
                     <div class="d-flex justify-content-between flex-grow-1">
                       <div class="me-4">
@@ -517,7 +518,7 @@ License: For each use you must have a valid license purchased only from above li
                   </a>
                   <a href="javascript:;" class="dropdown-item d-flex align-items-center py-2">
                     <div class="me-3">
-                      <img class="wd-30 ht-30 rounded-circle" src="../../../assets/images/faces/face6.jpg" alt="userr">
+                      <img class="wd-30 ht-30 rounded-circle" src="<?php echo base_url ('assets/images/faces/face6.jpg'); ?>" alt="userr">
                     </div>
                     <div class="d-flex justify-content-between flex-grow-1">
                       <div class="me-4">
@@ -566,7 +567,7 @@ License: For each use you must have a valid license purchased only from above li
                   </a>
                   <a href="javascript:;" class="dropdown-item d-flex align-items-center py-2">
                     <div class="wd-30 ht-30 d-flex align-items-center justify-content-center bg-primary rounded-circle me-3">
-                      <img class="wd-30 ht-30 rounded-circle" src="../../../assets/images/faces/face6.jpg" alt="userr">
+                      <img class="wd-30 ht-30 rounded-circle" src="<?php echo base_url ('assets/images/faces/face6.jpg'); ?>" alt="userr">
                     </div>
                     <div class="flex-grow-1 me-2">
 											<p>New customer registered</p>
@@ -599,12 +600,12 @@ License: For each use you must have a valid license purchased only from above li
 						</li>
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								<img class="wd-30 ht-30 rounded-circle" src="../../../assets/images/faces/face1.jpg" alt="profile">
+								<img class="wd-30 ht-30 rounded-circle" src="<?php echo base_url ('assets/images/faces/face1.jpg'); ?>" alt="profile">
 							</a>
 							<div class="dropdown-menu p-0" aria-labelledby="profileDropdown">
 								<div class="d-flex flex-column align-items-center border-bottom px-5 py-3">
 									<div class="mb-3">
-										<img class="wd-80 ht-80 rounded-circle" src="../../../assets/images/faces/face1.jpg" alt="">
+										<img class="wd-80 ht-80 rounded-circle" src="<?php echo base_url ('assets/images/faces/face1.jpg'); ?>" alt="">
 									</div>
 									<div class="text-center">
 										<p class="tx-16 fw-bolder">Amiah Burton</p>
@@ -613,7 +614,7 @@ License: For each use you must have a valid license purchased only from above li
 								</div>
                 <ul class="list-unstyled p-1">
                   <li class="dropdown-item py-2">
-                    <a href="../general/profile.html" class="text-body ms-0">
+                    <a href="pages/general/profile.html" class="text-body ms-0">
                       <i class="me-2 icon-md" data-feather="user"></i>
                       <span>Profile</span>
                     </a>
@@ -663,12 +664,12 @@ License: For each use you must have a valid license purchased only from above li
                         </div>
                       </div>
                       <div class="d-grid my-3">
-                        <a class="btn btn-primary" href="compose.html">Compose Email</a>
+                        <a class="btn btn-primary" href="<?php echo base_url ('email/compose'); ?>">Compose Email</a>
                       </div>
                     <div class="email-aside-nav collapse">
                       <ul class="nav flex-column">
                         <li class="nav-item active">
-                          <a class="nav-link d-flex align-items-center" href="inbox.html">
+                          <a class="nav-link d-flex align-items-center" href="<?php echo base_url ('email/inbox'); ?>">
                             <i data-feather="inbox" class="icon-lg me-2"></i>
                             Inbox
                             <span class="badge bg-danger fw-bolder ms-auto">2
@@ -745,7 +746,7 @@ License: For each use you must have a valid license purchased only from above li
                     <div class="d-flex align-items-center justify-content-between flex-wrap px-3 py-2 border-bottom">
                       <div class="d-flex align-items-center">
                         <div class="me-2">
-                          <img src="../../../assets/images/faces/face5.jpg" alt="Avatar" class="rounded-circle img-xs">
+                          <img src="<?php echo base_url ('assets/images/faces/face5.jpg'); ?>" alt="Avatar" class="rounded-circle img-xs">
                         </div>
                         <div class="d-flex align-items-center">
                           <a href="#" class="text-body">John Doe</a> 
@@ -792,32 +793,35 @@ License: For each use you must have a valid license purchased only from above li
 
 			</div>
 
-			<!-- partial:../../partials/_footer.html -->
+			<!-- partial:partials/_footer.html -->
 			<footer class="footer d-flex flex-column flex-md-row align-items-center justify-content-between px-4 py-3 border-top small">
 				<p class="text-muted mb-1 mb-md-0">Copyright © 2022 <a href="https://www.nobleui.com/" target="_blank">NobleUI</a>.</p>
 				<p class="text-muted">Handcrafted With <i class="mb-1 text-primary ms-1 icon-sm" data-feather="heart"></i></p>
 			</footer>
 			<!-- partial -->
-	
+		
 		</div>
 	</div>
 
 	<!-- core:js -->
-	<script src="../../../assets/vendors/core/core.js"></script>
+	<script src="<?php echo base_url ('assets/vendors/core/core.js'); ?>"></script>
 	<!-- endinject -->
 
 	<!-- Plugin js for this page -->
+  <script src="<?php echo base_url ('assets/vendors/flatpickr/flatpickr.min.js'); ?>"></script>
+  <script src="<?php echo base_url ('assets/vendors/apexcharts/apexcharts.min.js'); ?>"></script>
 	<!-- End plugin js for this page -->
 
 	<!-- inject:js -->
-	<script src="../../../assets/vendors/feather-icons/feather.min.js"></script>
-	<script src="../../../assets/js/template.js"></script>
+	<script src="<?php echo base_url ('assets/vendors/feather-icons/feather.min.js'); ?>"></script>
+	<script src="<?php echo base_url ('assets/js/template.js'); ?>"></script>
 	<!-- endinject -->
 
 	<!-- Custom js for this page -->
+  <script src="<?php echo base_url ('assets/js/dashboard-light.js'); ?>"></script>
 	<!-- End custom js for this page -->
 
 </body>
 
-<!-- Mirrored from www.nobleui.com/html/template/demo1/pages/email/read.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 10 Jun 2023 11:55:43 GMT -->
-</html>
+<!-- Mirrored from www.nobleui.com/html/template/demo1/dashboard.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 10 Jun 2023 11:55:43 GMT -->
+</html>    

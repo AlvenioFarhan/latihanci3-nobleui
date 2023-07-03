@@ -31,5 +31,12 @@ class Email extends CI_Controller {
     public function compose()
 	{
 		$this->load->view('email/compose');
+        
+	}
+
+    public function read()
+	{
+		$this->load->view('email/read');
+        
 	}
 }

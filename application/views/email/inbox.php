@@ -52,7 +52,7 @@ License: For each use you must have a valid license purchased only from above li
 		<!-- partial:partials/_sidebar.html -->
 		<nav class="sidebar">
       <div class="sidebar-header">
-        <a href="#" class="sidebar-brand">
+        <a href="<?php echo base_url (); ?>" class="sidebar-brand">
           Noble<span>UI</span>
         </a>
         <div class="sidebar-toggler not-active">
@@ -80,10 +80,10 @@ License: For each use you must have a valid license purchased only from above li
             <div class="collapse" id="emails">
               <ul class="nav sub-menu">
                 <li class="nav-item">
-                  <a href="<?php echo base_url ('pages/email/inbox'); ?>" class="nav-link">Inbox</a>
+                  <a href="<?php echo base_url ('email/inbox'); ?>" class="nav-link">Inbox</a>
                 </li>
                 <li class="nav-item">
-                  <a href="pages/email/read.html" class="nav-link">Read</a>
+                  <a href="<?php echo base_url ('email/read'); ?>" class="nav-link">Read</a>
                 </li>
                 <li class="nav-item">
                   <a href="<?php echo base_url ('email/compose'); ?>" class="nav-link">Compose</a>
@@ -663,12 +663,12 @@ License: For each use you must have a valid license purchased only from above li
                       </div>
                     </div>
                     <div class="d-grid my-3">
-                      <a class="btn btn-primary" href="compose.html">Compose Email</a>
+                      <a class="btn btn-primary" href="<?php echo base_url ('email/compose'); ?>">Compose Email</a>
                     </div>
                     <div class="email-aside-nav collapse">
                       <ul class="nav flex-column">
                         <li class="nav-item active">
-                          <a class="nav-link d-flex align-items-center" href="inbox.html">
+                          <a class="nav-link d-flex align-items-center" href="<?php echo base_url ('email/inbox'); ?>">
                             <i data-feather="inbox" class="icon-lg me-2"></i>
                             Inbox
                             <span class="badge bg-danger fw-bolder ms-auto">2

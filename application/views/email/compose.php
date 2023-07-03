@@ -83,7 +83,7 @@ License: For each use you must have a valid license purchased only from above li
                   <a href="<?php echo base_url ('email/inbox'); ?>" class="nav-link">Inbox</a>
                 </li>
                 <li class="nav-item">
-                  <a href="pages/email/read.html" class="nav-link">Read</a>
+                  <a href="<?php echo base_url ('email/read'); ?>" class="nav-link">Read</a>
                 </li>
                 <li class="nav-item">
                   <a href="<?php echo base_url ('email/compose'); ?>" class="nav-link">Compose</a>
