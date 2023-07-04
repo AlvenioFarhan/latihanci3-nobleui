@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class General extends CI_Controller {
+class Auth extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -20,36 +20,16 @@ class General extends CI_Controller {
 	 */
     public function index()
     {
-        $this->load->view('pages');
+        $this->load->view('auth');
     }
 
-	public function profile()
+	public function login()
 	{
-		$this->load->view('pages/general/profile');
+		$this->load->view('pages/auth/login');
 	}
 
-	public function blankpage()
+    public function register()
 	{
-		$this->load->view('pages/general/blank-page');
-	}
-
-	public function faq()
-	{
-		$this->load->view('pages/general/faq');
-	}
-
-	public function invoice()
-	{
-		$this->load->view('pages/general/invoice');
-	}
-
-	public function pricing()
-	{
-		$this->load->view('pages/general/pricing');
-	}
-
-	public function timeline()
-	{
-		$this->load->view('pages/general/timeline');
+		$this->load->view('pages/auth/register');
 	}
 }

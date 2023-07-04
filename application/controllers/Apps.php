@@ -20,16 +20,16 @@ class Apps extends CI_Controller {
 	 */
     public function index()
     {
-        $this->load->view('apps');
+        $this->load->view('pages');
     }
 
 	public function chat()
 	{
-		$this->load->view('apps/chat');
+		$this->load->view('pages/apps/chat');
 	}
 
     public function calendar()
 	{
-		$this->load->view('apps/calendar');
+		$this->load->view('pages/apps/calendar');
 	}
 }

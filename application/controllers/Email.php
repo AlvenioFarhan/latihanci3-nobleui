@@ -20,23 +20,23 @@ class Email extends CI_Controller {
 	 */
     public function index()
     {
-        $this->load->view('email');
+        $this->load->view('pages');
     }
 
 	public function inbox()
 	{
-		$this->load->view('email/inbox');
+		$this->load->view('pages/email/inbox');
 	}
 
     public function compose()
 	{
-		$this->load->view('email/compose');
+		$this->load->view('pages/email/compose');
         
 	}
 
     public function read()
 	{
-		$this->load->view('email/read');
+		$this->load->view('pages/email/read');
         
 	}
 }
