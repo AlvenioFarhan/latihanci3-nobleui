@@ -339,7 +339,7 @@ License: For each use you must have a valid license purchased only from above li
                   <a href="<?php echo base_url ('auth/login'); ?>" class="nav-link">Login</a>
                 </li>
                 <li class="nav-item">
-                  <a href="pages/auth/register.html" class="nav-link">Register</a>
+                  <a href="<?php echo base_url ('auth/register'); ?>" class="nav-link">Register</a>
                 </li>
               </ul>
             </div>
@@ -353,10 +353,10 @@ License: For each use you must have a valid license purchased only from above li
             <div class="collapse" id="errorPages">
               <ul class="nav sub-menu">
                 <li class="nav-item">
-                  <a href="pages/error/404.html" class="nav-link">404</a>
+                  <a href="<?php echo base_url ('error/fhf'); ?>" class="nav-link">404</a>
                 </li>
                 <li class="nav-item">
-                  <a href="pages/error/500.html" class="nav-link">500</a>
+                  <a href="<?php echo base_url ('error/fh'); ?>" class="nav-link">500</a>
                 </li>
               </ul>
             </div>
