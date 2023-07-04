@@ -45,4 +45,118 @@ class Uicomponents extends CI_Controller {
 		$this->load->view('pages/uicomponents/breadcrumbs');
         
 	}
+
+	public function buttongroup()
+	{
+		$this->load->view('pages/uicomponents/button-group');
+        
+	}
+
+	public function buttons()
+	{
+		$this->load->view('pages/uicomponents/buttons');
+        
+	}
+	
+	public function cards()
+	{
+		$this->load->view('pages/uicomponents/cards');
+        
+	}
+
+	public function carousel()
+	{
+		$this->load->view('pages/uicomponents/carousel');
+        
+	}
+
+	public function collapse()
+	{
+		$this->load->view('pages/uicomponents/collapse');
+        
+	}
+
+	public function dropdowns()
+	{
+		$this->load->view('pages/uicomponents/dropdowns');
+        
+	}
+
+	public function listgroup()
+	{
+		$this->load->view('pages/uicomponents/list-group');
+        
+	}
+
+	public function mediaobject()
+	{
+		$this->load->view('pages/uicomponents/media-object');
+        
+	}
+
+	public function modal()
+	{
+		$this->load->view('pages/uicomponents/modal');
+        
+	}
+
+	public function navbar()
+	{
+		$this->load->view('pages/uicomponents/navbar');
+        
+	}
+
+	public function navs()
+	{
+		$this->load->view('pages/uicomponents/navs');
+        
+	}
+
+	public function pagination()
+	{
+		$this->load->view('pages/uicomponents/pagination');
+        
+	}
+
+	public function popover()
+	{
+		$this->load->view('pages/uicomponents/popover');
+        
+	}
+
+	public function progress()
+	{
+		$this->load->view('pages/uicomponents/progress');
+        
+	}
+
+	public function scrollbar()
+	{
+		$this->load->view('pages/uicomponents/scrollbar');
+        
+	}
+
+	public function scrollspy()
+	{
+		$this->load->view('pages/uicomponents/scrollspy');
+        
+	}
+
+	public function spinners()
+	{
+		$this->load->view('pages/uicomponents/spinners');
+        
+	}
+
+	public function tabs()
+	{
+		$this->load->view('pages/uicomponents/tabs');
+        
+	}
+
+	public function tooltips()
+	{
+		$this->load->view('pages/uicomponents/tooltips');
+        
+	}
 }

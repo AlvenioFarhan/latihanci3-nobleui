@@ -37,6 +37,8 @@ License: For each use you must have a valid license purchased only from above li
 
 	<!-- Plugin css for this page -->
   <link rel="stylesheet" href="<?php echo base_url ('assets/vendors/flatpickr/flatpickr.min.css'); ?>">
+  <link rel="stylesheet" href="<?php echo base_url ('assets/vendors/prismjs/themes/prism.css'); ?>">	
+
 	<!-- End plugin css for this page -->
 
 	<!-- inject:css -->
@@ -872,6 +874,8 @@ License: For each use you must have a valid license purchased only from above li
 	<!-- Plugin js for this page -->
   <script src="<?php echo base_url ('assets/vendors/flatpickr/flatpickr.min.js'); ?>"></script>
   <script src="<?php echo base_url ('assets/vendors/apexcharts/apexcharts.min.js'); ?>"></script>
+  <script src="<?php echo base_url ('assets/vendors/prismjs/prism.js'); ?>"></script>
+	<script src="<?php echo base_url ('assets/vendors/clipboard/clipboard.min.js'); ?>"></script>
 	<!-- End plugin js for this page -->
 
 	<!-- inject:js -->

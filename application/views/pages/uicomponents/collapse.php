@@ -1,3 +1,7 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+?>
+
 <!DOCTYPE html>
 <!--
 Template Name: NobleUI - HTML Bootstrap 5 Admin Dashboard Template
@@ -10,7 +14,7 @@ License: For each use you must have a valid license purchased only from above li
 -->
 <html lang="en">
 
-<!-- Mirrored from www.nobleui.com/html/template/demo1/pages/ui-components/list-group.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 10 Jun 2023 11:55:49 GMT -->
+<!-- Mirrored from www.nobleui.com/html/template/demo1/dashboard.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 10 Jun 2023 11:55:23 GMT -->
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,37 +26,39 @@ License: For each use you must have a valid license purchased only from above li
 	<title>NobleUI - HTML Bootstrap 5 Admin Dashboard Template</title>
 
   <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com/">
-  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet">
+  <link rel="preconnect" href="<?php echo base_url ('https://fonts.googleapis.com/'); ?>">
+  <link rel="preconnect" href="<?php echo base_url ('https://fonts.gstatic.com/" crossorigin'); ?>">
+  <link href="<?php echo base_url ('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&amp;display=swap'); ?>" rel="stylesheet">
   <!-- End fonts -->
 
 	<!-- core:css -->
-	<link rel="stylesheet" href="../../../assets/vendors/core/core.css">
+	<link rel="stylesheet" href="<?php echo base_url ('assets/vendors/core/core.css'); ?>">
 	<!-- endinject -->
 
 	<!-- Plugin css for this page -->
-	<link rel="stylesheet" href="../../../assets/vendors/prismjs/themes/prism.css">
+  <link rel="stylesheet" href="<?php echo base_url ('assets/vendors/flatpickr/flatpickr.min.css'); ?>">
+  <link rel="stylesheet" href="<?php echo base_url ('assets/vendors/prismjs/themes/prism.css'); ?>">	
+
 	<!-- End plugin css for this page -->
 
 	<!-- inject:css -->
-	<link rel="stylesheet" href="../../../assets/fonts/feather-font/css/iconfont.css">
-	<link rel="stylesheet" href="../../../assets/vendors/flag-icon-css/css/flag-icon.min.css">
+	<link rel="stylesheet" href="<?php echo base_url ('assets/fonts/feather-font/css/iconfont.css'); ?>">
+	<link rel="stylesheet" href="<?php echo base_url ('assets/vendors/flag-icon-css/css/flag-icon.min.css'); ?>">
 	<!-- endinject -->
 
   <!-- Layout styles -->  
-	<link rel="stylesheet" href="../../../assets/css/demo1/style.min.css">
+	<link rel="stylesheet" href="<?php echo base_url ('assets/css/demo1/style.min.css'); ?>">
   <!-- End layout styles -->
 
-  <link rel="shortcut icon" href="../../../assets/images/favicon.png" />
+  <link rel="shortcut icon" href="<?php echo base_url ('assets/images/favicon.png'); ?>" />
 </head>
 <body>
 	<div class="main-wrapper">
 
-		<!-- partial:../../partials/_sidebar.html -->
+		<!-- partial:partials/_sidebar.html -->
 		<nav class="sidebar">
       <div class="sidebar-header">
-        <a href="#" class="sidebar-brand">
+        <a href="<?php echo base_url () ; ?>" class="sidebar-brand">
           Noble<span>UI</span>
         </a>
         <div class="sidebar-toggler not-active">
@@ -65,7 +71,7 @@ License: For each use you must have a valid license purchased only from above li
         <ul class="nav">
           <li class="nav-item nav-category">Main</li>
           <li class="nav-item">
-            <a href="../../dashboard.html" class="nav-link">
+            <a href="<?php echo base_url (); ?>" class="nav-link">
               <i class="link-icon" data-feather="box"></i>
               <span class="link-title">Dashboard</span>
             </a>
@@ -80,25 +86,25 @@ License: For each use you must have a valid license purchased only from above li
             <div class="collapse" id="emails">
               <ul class="nav sub-menu">
                 <li class="nav-item">
-                  <a href="../email/inbox.html" class="nav-link">Inbox</a>
+                  <a href="<?php echo base_url ('email/inbox'); ?>" class="nav-link">Inbox</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../email/read.html" class="nav-link">Read</a>
+                  <a href="<?php echo base_url ('email/read'); ?>" class="nav-link">Read</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../email/compose.html" class="nav-link">Compose</a>
+                  <a href="<?php echo base_url ('email/compose'); ?>" class="nav-link">Compose</a>
                 </li>
               </ul>
             </div>
           </li>
           <li class="nav-item">
-            <a href="../apps/chat.html" class="nav-link">
+            <a href="<?php echo base_url ('apps/chat'); ?>" class="nav-link">
               <i class="link-icon" data-feather="message-square"></i>
               <span class="link-title">Chat</span>
             </a>
           </li>
           <li class="nav-item">
-            <a href="../apps/calendar.html" class="nav-link">
+            <a href="<?php echo base_url ('apps/calendar'); ?>" class="nav-link">
               <i class="link-icon" data-feather="calendar"></i>
               <span class="link-title">Calendar</span>
             </a>
@@ -113,73 +119,73 @@ License: For each use you must have a valid license purchased only from above li
             <div class="collapse" id="uiComponents">
               <ul class="nav sub-menu">
                 <li class="nav-item">
-                  <a href="accordion.html" class="nav-link">Accordion</a>
+                  <a href="<?php echo base_url ('uicomponents/accordion'); ?>" class="nav-link">Accordion</a>
                 </li>
                 <li class="nav-item">
-                  <a href="alerts.html" class="nav-link">Alerts</a>
+                  <a href="<?php echo base_url ('uicomponents/alerts'); ?>" class="nav-link">Alerts</a>
                 </li>
                 <li class="nav-item">
-                  <a href="badges.html" class="nav-link">Badges</a>
+                  <a href="<?php echo base_url ('uicomponents/badges'); ?>" class="nav-link">Badges</a>
                 </li>
                 <li class="nav-item">
-                  <a href="breadcrumbs.html" class="nav-link">Breadcrumbs</a>
+                  <a href="<?php echo base_url ('uicomponents/breadcrumbs'); ?>" class="nav-link">Breadcrumbs</a>
                 </li>
                 <li class="nav-item">
-                  <a href="buttons.html" class="nav-link">Buttons</a>
+                  <a href="<?php echo base_url ('uicomponents/buttons'); ?>" class="nav-link">Buttons</a>
                 </li>
                 <li class="nav-item">
-                  <a href="button-group.html" class="nav-link">Button group</a>
+                  <a href="<?php echo base_url ('uicomponents/button-group'); ?>" class="nav-link">Button group</a>
                 </li>
                 <li class="nav-item">
-                  <a href="cards.html" class="nav-link">Cards</a>
+                  <a href="<?php echo base_url ('uicomponents/cards'); ?>" class="nav-link">Cards</a>
                 </li>
                 <li class="nav-item">
-                  <a href="carousel.html" class="nav-link">Carousel</a>
+                  <a href="<?php echo base_url ('uicomponents/carousel'); ?>" class="nav-link">Carousel</a>
                 </li>
                 <li class="nav-item">
-                    <a href="collapse.html" class="nav-link">Collapse</a>
+                    <a href="<?php echo base_url ('uicomponents/collapse'); ?>" class="nav-link">Collapse</a>
                   </li>
                 <li class="nav-item">
-                  <a href="dropdowns.html" class="nav-link">Dropdowns</a>
+                  <a href="<?php echo base_url ('uicomponents/dropdowns'); ?>" class="nav-link">Dropdowns</a>
                 </li>
                 <li class="nav-item">
-                  <a href="list-group.html" class="nav-link">List group</a>
+                  <a href="<?php echo base_url ('uicomponents/list-group'); ?>" class="nav-link">List group</a>
                 </li>
                 <li class="nav-item">
-                  <a href="media-object.html" class="nav-link">Media object</a>
+                  <a href="<?php echo base_url ('uicomponents/media-object'); ?>" class="nav-link">Media object</a>
                 </li>
                 <li class="nav-item">
-                  <a href="modal.html" class="nav-link">Modal</a>
+                  <a href="<?php echo base_url ('uicomponents/modal'); ?>" class="nav-link">Modal</a>
                 </li>
                 <li class="nav-item">
-                  <a href="navs.html" class="nav-link">Navs</a>
+                  <a href="<?php echo base_url ('uicomponents/navs'); ?>" class="nav-link">Navs</a>
                 </li>
                 <li class="nav-item">
-                  <a href="navbar.html" class="nav-link">Navbar</a>
+                  <a href="<?php echo base_url ('uicomponents/navbar'); ?>" class="nav-link">Navbar</a>
                 </li>
                 <li class="nav-item">
-                  <a href="pagination.html" class="nav-link">Pagination</a>
+                  <a href="<?php echo base_url ('uicomponents/pagination'); ?>" class="nav-link">Pagination</a>
                 </li>
                 <li class="nav-item">
-                  <a href="popover.html" class="nav-link">Popovers</a>
+                  <a href="<?php echo base_url ('uicomponents/popover'); ?>" class="nav-link">Popovers</a>
                 </li>
                 <li class="nav-item">
-                  <a href="progress.html" class="nav-link">Progress</a>
+                  <a href="<?php echo base_url ('uicomponents/progress'); ?>" class="nav-link">Progress</a>
                 </li>
                 <li class="nav-item">
-                  <a href="scrollbar.html" class="nav-link">Scrollbar</a>
+                  <a href="<?php echo base_url ('uicomponents/scrollbar'); ?>" class="nav-link">Scrollbar</a>
                 </li>
                 <li class="nav-item">
-                  <a href="scrollspy.html" class="nav-link">Scrollspy</a>
+                  <a href="<?php echo base_url ('uicomponents/scrollspy'); ?>" class="nav-link">Scrollspy</a>
                 </li>
                 <li class="nav-item">
-                  <a href="spinners.html" class="nav-link">Spinners</a>
+                  <a href="<?php echo base_url ('uicomponents/spinners'); ?>" class="nav-link">Spinners</a>
                 </li>
                 <li class="nav-item">
-                  <a href="tabs.html" class="nav-link">Tabs</a>
+                  <a href="<?php echo base_url ('uicomponents/tabs'); ?>" class="nav-link">Tabs</a>
                 </li>
                 <li class="nav-item">
-                  <a href="tooltips.html" class="nav-link">Tooltips</a>
+                  <a href="<?php echo base_url ('uicomponents/tooltips'); ?>" class="nav-link">Tooltips</a>
                 </li>
               </ul>
             </div>
@@ -193,16 +199,16 @@ License: For each use you must have a valid license purchased only from above li
             <div class="collapse" id="advancedUI">
               <ul class="nav sub-menu">
                 <li class="nav-item">
-                  <a href="../advanced-ui/cropper.html" class="nav-link">Cropper</a>
+                  <a href="advanced-ui/cropper.html" class="nav-link">Cropper</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../advanced-ui/owl-carousel.html" class="nav-link">Owl carousel</a>
+                  <a href="advanced-ui/owl-carousel.html" class="nav-link">Owl carousel</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../advanced-ui/sortablejs.html" class="nav-link">SortableJs</a>
+                  <a href="advanced-ui/sortablejs.html" class="nav-link">SortableJs</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../advanced-ui/sweet-alert.html" class="nav-link">Sweet Alert</a>
+                  <a href="advanced-ui/sweet-alert.html" class="nav-link">Sweet Alert</a>
                 </li>
               </ul>
             </div>
@@ -216,16 +222,16 @@ License: For each use you must have a valid license purchased only from above li
             <div class="collapse" id="forms">
               <ul class="nav sub-menu">
                 <li class="nav-item">
-                  <a href="../forms/basic-elements.html" class="nav-link">Basic Elements</a>
+                  <a href="forms/basic-elements.html" class="nav-link">Basic Elements</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../forms/advanced-elements.html" class="nav-link">Advanced Elements</a>
+                  <a href="forms/advanced-elements.html" class="nav-link">Advanced Elements</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../forms/editors.html" class="nav-link">Editors</a>
+                  <a href="forms/editors.html" class="nav-link">Editors</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../forms/wizard.html" class="nav-link">Wizard</a>
+                  <a href="forms/wizard.html" class="nav-link">Wizard</a>
                 </li>
               </ul>
             </div>
@@ -239,19 +245,19 @@ License: For each use you must have a valid license purchased only from above li
             <div class="collapse" id="charts">
               <ul class="nav sub-menu">
                 <li class="nav-item">
-                  <a href="../charts/apex.html" class="nav-link">Apex</a>
+                  <a href="charts/apex.html" class="nav-link">Apex</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../charts/chartjs.html" class="nav-link">ChartJs</a>
+                  <a href="charts/chartjs.html" class="nav-link">ChartJs</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../charts/flot.html" class="nav-link">Flot</a>
+                  <a href="charts/flot.html" class="nav-link">Flot</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../charts/peity.html" class="nav-link">Peity</a>
+                  <a href="charts/peity.html" class="nav-link">Peity</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../charts/sparkline.html" class="nav-link">Sparkline</a>
+                  <a href="charts/sparkline.html" class="nav-link">Sparkline</a>
                 </li>
               </ul>
             </div>
@@ -265,10 +271,10 @@ License: For each use you must have a valid license purchased only from above li
             <div class="collapse" id="tables">
               <ul class="nav sub-menu">
                 <li class="nav-item">
-                  <a href="../tables/basic-table.html" class="nav-link">Basic Tables</a>
+                  <a href="tables/basic-table.html" class="nav-link">Basic Tables</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../tables/data-table.html" class="nav-link">Data Table</a>
+                  <a href="tables/data-table.html" class="nav-link">Data Table</a>
                 </li>
               </ul>
             </div>
@@ -282,13 +288,13 @@ License: For each use you must have a valid license purchased only from above li
             <div class="collapse" id="icons">
               <ul class="nav sub-menu">
                 <li class="nav-item">
-                  <a href="../icons/feather-icons.html" class="nav-link">Feather Icons</a>
+                  <a href="icons/feather-icons.html" class="nav-link">Feather Icons</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../icons/flag-icons.html" class="nav-link">Flag Icons</a>
+                  <a href="icons/flag-icons.html" class="nav-link">Flag Icons</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../icons/mdi-icons.html" class="nav-link">Mdi Icons</a>
+                  <a href="icons/mdi-icons.html" class="nav-link">Mdi Icons</a>
                 </li>
               </ul>
             </div>
@@ -303,22 +309,22 @@ License: For each use you must have a valid license purchased only from above li
             <div class="collapse" id="general-pages">
               <ul class="nav sub-menu">
                 <li class="nav-item">
-                  <a href="../general/blank-page.html" class="nav-link">Blank page</a>
+                  <a href="<?php echo base_url ('general/blankpage'); ?>" class="nav-link">Blank page</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../general/faq.html" class="nav-link">Faq</a>
+                  <a href="<?php echo base_url ('general/faq'); ?>" class="nav-link">Faq</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../general/invoice.html" class="nav-link">Invoice</a>
+                  <a href="<?php echo base_url ('general/invoice'); ?>" class="nav-link">Invoice</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../general/profile.html" class="nav-link">Profile</a>
+                  <a href="<?php echo base_url ('general/profile'); ?>" class="nav-link">Profile</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../general/pricing.html" class="nav-link">Pricing</a>
+                  <a href="<?php echo base_url ('general/pricing'); ?>" class="nav-link">Pricing</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../general/timeline.html" class="nav-link">Timeline</a>
+                  <a href="<?php echo base_url ('general/timeline'); ?>" class="nav-link">Timeline</a>
                 </li>
               </ul>
             </div>
@@ -332,10 +338,10 @@ License: For each use you must have a valid license purchased only from above li
             <div class="collapse" id="authPages">
               <ul class="nav sub-menu">
                 <li class="nav-item">
-                  <a href="../auth/login.html" class="nav-link">Login</a>
+                  <a href="<?php echo base_url ('auth/login'); ?>" class="nav-link">Login</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../auth/register.html" class="nav-link">Register</a>
+                  <a href="<?php echo base_url ('auth/register'); ?>" class="nav-link">Register</a>
                 </li>
               </ul>
             </div>
@@ -349,10 +355,10 @@ License: For each use you must have a valid license purchased only from above li
             <div class="collapse" id="errorPages">
               <ul class="nav sub-menu">
                 <li class="nav-item">
-                  <a href="../error/404.html" class="nav-link">404</a>
+                  <a href="<?php echo base_url ('error404'); ?>" class="nav-link">404</a>
                 </li>
                 <li class="nav-item">
-                  <a href="../error/500.html" class="nav-link">500</a>
+                  <a href="<?php echo base_url ('error500'); ?>" class="nav-link">500</a>
                 </li>
               </ul>
             </div>
@@ -389,12 +395,12 @@ License: For each use you must have a valid license purchased only from above li
         </div>
         <div class="theme-wrapper">
           <h6 class="text-muted mb-2">Light Theme:</h6>
-          <a class="theme-item active" href="../../dashboard.html">
-            <img src="../../../assets/images/screenshots/light.jpg" alt="light theme">
+          <a class="theme-item active" href="dashboard.html">
+            <img src="<?php echo base_url ('assets/images/screenshots/light.jpg'); ?>" alt="light theme">
           </a>
           <h6 class="text-muted mb-2">Dark Theme:</h6>
           <a class="theme-item" href="https://www.nobleui.com/html/template/demo2/dashboard.html">
-            <img src="../../../assets/images/screenshots/dark.jpg" alt="light theme">
+            <img src="<?php echo base_url ('assets/images/screenshots/dark.jpg'); ?>" alt="light theme">
           </a>
         </div>
       </div>
@@ -402,8 +408,8 @@ License: For each use you must have a valid license purchased only from above li
 		<!-- partial -->
 	
 		<div class="page-wrapper">
-				
-			<!-- partial:../../partials/_navbar.html -->
+					
+			<!-- partial:partials/_navbar.html -->
 			<nav class="navbar">
 				<a href="#" class="sidebar-toggler">
 					<i data-feather="menu"></i>
@@ -441,16 +447,16 @@ License: For each use you must have a valid license purchased only from above li
 								</div>
                 <div class="row g-0 p-1">
                   <div class="col-3 text-center">
-                    <a href="../apps/chat.html" class="dropdown-item d-flex flex-column align-items-center justify-content-center wd-70 ht-70"><i data-feather="message-square" class="icon-lg mb-1"></i><p class="tx-12">Chat</p></a>
+                    <a href="apps/chat.html" class="dropdown-item d-flex flex-column align-items-center justify-content-center wd-70 ht-70"><i data-feather="message-square" class="icon-lg mb-1"></i><p class="tx-12">Chat</p></a>
                   </div>
                   <div class="col-3 text-center">
-                    <a href="../apps/calendar.html" class="dropdown-item d-flex flex-column align-items-center justify-content-center wd-70 ht-70"><i data-feather="calendar" class="icon-lg mb-1"></i><p class="tx-12">Calendar</p></a>
+                    <a href="<?php echo base_url ('apps/calendar.html'); ?>" class="dropdown-item d-flex flex-column align-items-center justify-content-center wd-70 ht-70"><i data-feather="calendar" class="icon-lg mb-1"></i><p class="tx-12">Calendar</p></a>
                   </div>
                   <div class="col-3 text-center">
-                    <a href="../email/inbox.html" class="dropdown-item d-flex flex-column align-items-center justify-content-center wd-70 ht-70"><i data-feather="mail" class="icon-lg mb-1"></i><p class="tx-12">Email</p></a>
+                    <a href="email/inbox.html" class="dropdown-item d-flex flex-column align-items-center justify-content-center wd-70 ht-70"><i data-feather="mail" class="icon-lg mb-1"></i><p class="tx-12">Email</p></a>
                   </div>
                   <div class="col-3 text-center">
-                    <a href="../general/profile.html" class="dropdown-item d-flex flex-column align-items-center justify-content-center wd-70 ht-70"><i data-feather="instagram" class="icon-lg mb-1"></i><p class="tx-12">Profile</p></a>
+                    <a href="general/profile.html" class="dropdown-item d-flex flex-column align-items-center justify-content-center wd-70 ht-70"><i data-feather="instagram" class="icon-lg mb-1"></i><p class="tx-12">Profile</p></a>
                   </div>
                 </div>
 								<div class="px-3 py-2 d-flex align-items-center justify-content-center border-top">
@@ -470,7 +476,7 @@ License: For each use you must have a valid license purchased only from above li
                 <div class="p-1">
                   <a href="javascript:;" class="dropdown-item d-flex align-items-center py-2">
                     <div class="me-3">
-                      <img class="wd-30 ht-30 rounded-circle" src="../../../assets/images/faces/face2.jpg" alt="userr">
+                      <img class="wd-30 ht-30 rounded-circle" src="<?php echo base_url ('assets/images/faces/face2.jpg'); ?>" alt="userr">
                     </div>
                     <div class="d-flex justify-content-between flex-grow-1">
                       <div class="me-4">
@@ -482,7 +488,7 @@ License: For each use you must have a valid license purchased only from above li
                   </a>
                   <a href="javascript:;" class="dropdown-item d-flex align-items-center py-2">
                     <div class="me-3">
-                      <img class="wd-30 ht-30 rounded-circle" src="../../../assets/images/faces/face3.jpg" alt="userr">
+                      <img class="wd-30 ht-30 rounded-circle" src="<?php echo base_url ('assets/images/faces/face3.jpg'); ?>" alt="userr">
                     </div>
                     <div class="d-flex justify-content-between flex-grow-1">
                       <div class="me-4">
@@ -494,7 +500,7 @@ License: For each use you must have a valid license purchased only from above li
                   </a>
                   <a href="javascript:;" class="dropdown-item d-flex align-items-center py-2">
                     <div class="me-3">
-                      <img class="wd-30 ht-30 rounded-circle" src="../../../assets/images/faces/face4.jpg" alt="userr">
+                      <img class="wd-30 ht-30 rounded-circle" src="<?php echo base_url ('assets/images/faces/face4.jpg'); ?>" alt="userr">
                     </div>
                     <div class="d-flex justify-content-between flex-grow-1">
                       <div class="me-4">
@@ -506,7 +512,7 @@ License: For each use you must have a valid license purchased only from above li
                   </a>
                   <a href="javascript:;" class="dropdown-item d-flex align-items-center py-2">
                     <div class="me-3">
-                      <img class="wd-30 ht-30 rounded-circle" src="../../../assets/images/faces/face5.jpg" alt="userr">
+                      <img class="wd-30 ht-30 rounded-circle" src="<?php echo base_url ('assets/images/faces/face5.jpg'); ?>" alt="userr">
                     </div>
                     <div class="d-flex justify-content-between flex-grow-1">
                       <div class="me-4">
@@ -518,7 +524,7 @@ License: For each use you must have a valid license purchased only from above li
                   </a>
                   <a href="javascript:;" class="dropdown-item d-flex align-items-center py-2">
                     <div class="me-3">
-                      <img class="wd-30 ht-30 rounded-circle" src="../../../assets/images/faces/face6.jpg" alt="userr">
+                      <img class="wd-30 ht-30 rounded-circle" src="<?php echo base_url ('assets/images/faces/face6.jpg'); ?>" alt="userr">
                     </div>
                     <div class="d-flex justify-content-between flex-grow-1">
                       <div class="me-4">
@@ -567,7 +573,7 @@ License: For each use you must have a valid license purchased only from above li
                   </a>
                   <a href="javascript:;" class="dropdown-item d-flex align-items-center py-2">
                     <div class="wd-30 ht-30 d-flex align-items-center justify-content-center bg-primary rounded-circle me-3">
-                      <img class="wd-30 ht-30 rounded-circle" src="../../../assets/images/faces/face6.jpg" alt="userr">
+                      <img class="wd-30 ht-30 rounded-circle" src="<?php echo base_url ('assets/images/faces/face6.jpg'); ?>" alt="userr">
                     </div>
                     <div class="flex-grow-1 me-2">
 											<p>New customer registered</p>
@@ -600,12 +606,12 @@ License: For each use you must have a valid license purchased only from above li
 						</li>
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								<img class="wd-30 ht-30 rounded-circle" src="../../../assets/images/faces/face1.jpg" alt="profile">
+								<img class="wd-30 ht-30 rounded-circle" src="<?php echo base_url ('assets/images/faces/face1.jpg'); ?>" alt="profile">
 							</a>
 							<div class="dropdown-menu p-0" aria-labelledby="profileDropdown">
 								<div class="d-flex flex-column align-items-center border-bottom px-5 py-3">
 									<div class="mb-3">
-										<img class="wd-80 ht-80 rounded-circle" src="../../../assets/images/faces/face1.jpg" alt="">
+										<img class="wd-80 ht-80 rounded-circle" src="<?php echo base_url ('assets/images/faces/face1.jpg'); ?>" alt="">
 									</div>
 									<div class="text-center">
 										<p class="tx-16 fw-bolder">Amiah Burton</p>
@@ -614,7 +620,7 @@ License: For each use you must have a valid license purchased only from above li
 								</div>
                 <ul class="list-unstyled p-1">
                   <li class="dropdown-item py-2">
-                    <a href="../general/profile.html" class="text-body ms-0">
+                    <a href="<?php echo base_url ('general/profile'); ?>" class="text-body ms-0">
                       <i class="me-2 icon-md" data-feather="user"></i>
                       <span>Profile</span>
                     </a>
@@ -648,300 +654,141 @@ License: For each use you must have a valid license purchased only from above li
 			<div class="page-content">
 				<div class="row">
 					<div class="col-xl-10 main-content ps-xl-4 pe-xl-5">
-						<h1 class="page-title">List Group</h1>
-						<p class="lead">List groups are a flexible and powerful component for displaying a series of content. Read the <a href="https://getbootstrap.com/docs/5.1/components/list-group/" target="_blank">Official Bootstrap Documentation</a> for a full list of instructions and other options.</p>
-						<hr>
-						<h4 id="default">Basic example</h4>
-						<p class="mb-3">The most basic list group is an unordered list with list items and the proper classes. Build upon it with the options that follow, or with your own CSS as needed.</p>
+						<h1 class="page-title">Collapse</h1>
+						<p class="lead">Toggle the visibility of content across your project with a few classes and javascript. Read the <a href="https://getbootstrap.com/docs/5.1/components/collapse/" target="_blank">Official Bootstrap Documentation</a> for a full list of instructions and other options.</p>
+            
+            <hr>
+            
+            <h4 id="default">Basic Example</h4>
+						<p class="mb-3">Click the buttons below to show and hide another element via class changes:</p>
 						<div class="example">
-              <div class="row">
-                <div class="col-12 col-md-6">
-                  <ul class="list-group">
-                    <li class="list-group-item">Cras justo odio</li>
-                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                    <li class="list-group-item">Morbi leo risus</li>
-                    <li class="list-group-item">Porta ac consectetur ac</li>
-                    <li class="list-group-item">Vestibulum at eros</li>
-                  </ul>
+                <p>
+                  <a class="btn btn-primary mb-1 mb-md-0" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    Link with href
+                  </a>
+                  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    Button with data-target
+                  </button>
+                </p>
+                <div class="collapse" id="collapseExample">
+                  <div class="card card-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                  </div>
                 </div>
-              </div>
 						</div>
-						<figure class="highlight" id="Default">
-<pre><code class="language-markup"><script type="script/prism-html-markup"><ul class="list-group">
-  <li class="list-group-item">Cras justo odio</li>
-  <li class="list-group-item">Dapibus ac facilisis in</li>
-  <li class="list-group-item">Morbi leo risus</li>
-  <li class="list-group-item">Porta ac consectetur ac</li>
-  <li class="list-group-item">Vestibulum at eros</li>
-</ul></script></code></pre>
-							<button type="button" class="btn btn-clipboard" data-clipboard-target="#Default">copy</button>
+						<figure class="highlight" id="defaultBreadcrumbs">
+<pre><code class="language-markup"><script type="script/prism-html-markup"><p>
+  <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+    Link with href
+  </a>
+  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    Button with data-target
+  </button>
+</p>
+<div class="collapse" id="collapseExample">
+  <div class="card card-body">
+    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+  </div>
+</div></script></code></pre>
+							<button type="button" class="btn btn-clipboard" data-clipboard-target="#defaultBreadcrumbs">copy</button>
             </figure>
             
             <hr>
 
-            <h4 id="active-items">Active items</h4>
-						<p class="mb-3">Add <code>.active</code> to a <code>.list-group-item</code> to indicate the current active selection.</p>
+            <h4 id="multiple">Multiple targets</h4>
+						<p class="mb-3">A <code>&lt;button&gt;</code> or <code>&lt;a&gt;</code> can show and hide multiple elements by referencing them with a selector in its <code>href</code> or <code>data-bs-target</code> attribute. Multiple <code>&lt;button&gt;</code> or <code>&lt;a&gt;</code> can show and hide an element if they each reference it with their <code>href</code> or <code>data-bs-target</code> attribute</p>
 						<div class="example">
+              <p>
+                <a class="btn btn-primary mb-1 mb-md-0" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element</a>
+                <button class="btn btn-primary mb-1 mb-md-0" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Toggle second element</button>
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Toggle both elements</button>
+              </p>
               <div class="row">
-                <div class="col-12 col-md-6">
-                  <ul class="list-group">
-                    <li class="list-group-item active">Cras justo odio</li>
-                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                    <li class="list-group-item">Morbi leo risus</li>
-                    <li class="list-group-item">Porta ac consectetur ac</li>
-                    <li class="list-group-item">Vestibulum at eros</li>
-                  </ul>                  
+                <div class="col">
+                  <div class="collapse multi-collapse" id="multiCollapseExample1">
+                    <div class="card card-body">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                    </div>
+                  </div>
                 </div>
-              </div>
-						</div>
-						<figure class="highlight" id="activeItems">
-<pre><code class="language-markup"><script type="script/prism-html-markup"><ul class="list-group">
-  <li class="list-group-item active">Cras justo odio</li>
-  <li class="list-group-item">Dapibus ac facilisis in</li>
-  <li class="list-group-item">Morbi leo risus</li>
-  <li class="list-group-item">Porta ac consectetur ac</li>
-  <li class="list-group-item">Vestibulum at eros</li>
-</ul></script></code></pre>
-							<button type="button" class="btn btn-clipboard" data-clipboard-target="#activeItems">copy</button>
-            </figure>
-            
-            <hr>
-
-            <h4 id="disabled-items">Disabled items</h4>
-						<p class="mb-3">Add <code>.disabled</code> to a <code>.list-group-item</code> to make it <em>appear</em> disabled. Note that some elements with <code>.disabled</code> will also require custom JavaScript to fully disable their click events (e.g., links).</p>
-						<div class="example">
-              <div class="row">
-                <div class="col-12 col-md-6">
-                  <ul class="list-group">
-                    <li class="list-group-item disabled" aria-disabled="true">Cras justo odio</li>
-                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                    <li class="list-group-item">Morbi leo risus</li>
-                    <li class="list-group-item">Porta ac consectetur ac</li>
-                    <li class="list-group-item">Vestibulum at eros</li>
-                  </ul>
-                </div>
-              </div>
-						</div>
-						<figure class="highlight" id="disabledItems">
-<pre><code class="language-markup"><script type="script/prism-html-markup"><ul class="list-group">
-  <li class="list-group-item disabled" aria-disabled="true">Cras justo odio</li>
-  <li class="list-group-item">Dapibus ac facilisis in</li>
-  <li class="list-group-item">Morbi leo risus</li>
-  <li class="list-group-item">Porta ac consectetur ac</li>
-  <li class="list-group-item">Vestibulum at eros</li>
-</ul></script></code></pre>
-							<button type="button" class="btn btn-clipboard" data-clipboard-target="#disabledItems">copy</button>
-            </figure>
-            
-            <hr>
-
-            <h4 id="links-buttons">Links and buttons</h4>
-						<p class="mb-3">Use <code>&lt;a&gt;</code>s or <code>&lt;button&gt;</code>s to create <em>actionable</em> list group items with hover, disabled, and active states by adding <code>.list-group-item-action</code>.</p>
-						<div class="example">
-              <div class="row">
-                <div class="col-12 col-md-6">
-                  <div class="list-group">
-                    <a href="javascript:;" class="list-group-item list-group-item-action active">
-                      Cras justo odio
-                    </a>
-                    <a href="javascript:;" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
-                    <a href="javascript:;" class="list-group-item list-group-item-action">Morbi leo risus</a>
-                    <a href="javascript:;" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
-                    <a href="javascript:;" class="list-group-item list-group-item-action disabled" tabindex="-1" aria-disabled="true">Vestibulum at eros</a>
+                <div class="col">
+                  <div class="collapse multi-collapse" id="multiCollapseExample2">
+                    <div class="card card-body">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                    </div>
                   </div>
                 </div>
               </div>
 						</div>
-						<figure class="highlight" id="linksButtons">
-<pre><code class="language-markup"><script type="script/prism-html-markup"><div class="list-group">
-  <a href="#" class="list-group-item list-group-item-action active">
-    Cras justo odio
-  </a>
-  <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
-  <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
-  <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
-  <a href="#" class="list-group-item list-group-item-action disabled" tabindex="-1" aria-disabled="true">Vestibulum at eros</a>
+						<figure class="highlight" id="multipleTargets">
+<pre><code class="language-markup"><script type="script/prism-html-markup"><p>
+  <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element</a>
+  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Toggle second element</button>
+  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Toggle both elements</button>
+</p>
+<div class="row">
+  <div class="col">
+    <div class="collapse multi-collapse" id="multiCollapseExample1">
+      <div class="card card-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="collapse multi-collapse" id="multiCollapseExample2">
+      <div class="card card-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+      </div>
+    </div>
+  </div>
 </div></script></code></pre>
-							<button type="button" class="btn btn-clipboard" data-clipboard-target="#linksButtons">copy</button>
-            </figure>
-            
-            <hr>
-
-            <h4 id="flush">Flush</h4>
-						<p class="mb-3">Add <code>.list-group-flush</code> to remove some borders and rounded corners to render list group items edge-to-edge in a parent container (e.g., cards).</p>
-						<div class="example">
-              <div class="row">
-                <div class="col-12 col-md-6">
-                  <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Cras justo odio</li>
-                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                    <li class="list-group-item">Morbi leo risus</li>
-                    <li class="list-group-item">Porta ac consectetur ac</li>
-                    <li class="list-group-item">Vestibulum at eros</li>
-                  </ul>
-                </div>
-              </div>
-						</div>
-						<figure class="highlight" id="Flush">
-<pre><code class="language-markup"><script type="script/prism-html-markup"><ul class="list-group list-group-flush">
-  <li class="list-group-item">Cras justo odio</li>
-  <li class="list-group-item">Dapibus ac facilisis in</li>
-  <li class="list-group-item">Morbi leo risus</li>
-  <li class="list-group-item">Porta ac consectetur ac</li>
-  <li class="list-group-item">Vestibulum at eros</li>
-</ul></script></code></pre>
-							<button type="button" class="btn btn-clipboard" data-clipboard-target="#Flush">copy</button>
-            </figure>
-
-            <hr>
-
-            <h4 id="with-badges">With badges</h4>
-            <p class="mb-3">Add badges to any list group item to show unread counts, activity, and more with the help of some <a href="https://getbootstrap.com/docs/5.1/utilities/flex/" target="_blank">utilities</a>.</p>
-						<div class="example">
-              <ul class="list-group">
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                  A list item
-                  <span class="badge bg-primary rounded-pill">14</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                  A second list item
-                  <span class="badge bg-primary rounded-pill">2</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                  A third list item
-                  <span class="badge bg-primary rounded-pill">1</span>
-                </li>
-              </ul>
-						</div>
-						<figure class="highlight" id="withBadges">
-<pre><code class="language-markup"><script type="script/prism-html-markup"><ul class="list-group">
-  <li class="list-group-item d-flex justify-content-between align-items-center">
-    A list item
-    <span class="badge bg-primary rounded-pill">14</span>
-  </li>
-  <li class="list-group-item d-flex justify-content-between align-items-center">
-    A second list item
-    <span class="badge bg-primary rounded-pill">2</span>
-  </li>
-  <li class="list-group-item d-flex justify-content-between align-items-center">
-    A third list item
-    <span class="badge bg-primary rounded-pill">1</span>
-  </li>
-</ul></script></code></pre>
-							<button type="button" class="btn btn-clipboard" data-clipboard-target="#withBadges">copy</button>
-            </figure>
-
-            <hr>
-
-            <h4 id="checkboxes-radios">Checkboxes and radios</h4>
-            <p class="mb-3">Place Bootstrap’s checkboxes and radios within list group items and customize as needed.</p>
-						<div class="example">
-              <div class="list-group">
-                <label class="list-group-item">
-                  <input class="form-check-input me-1" type="checkbox" value="">
-                  First checkbox
-                </label>
-                <label class="list-group-item">
-                  <input class="form-check-input me-1" type="checkbox" value="">
-                  Second checkbox
-                </label>
-                <label class="list-group-item">
-                  <input class="form-check-input me-1" type="checkbox" value="">
-                  Third checkbox
-                </label>
-                <label class="list-group-item">
-                  <input class="form-check-input me-1" type="checkbox" value="">
-                  Fourth checkbox
-                </label>
-                <label class="list-group-item">
-                  <input class="form-check-input me-1" type="checkbox" value="">
-                  Fifth checkbox
-                </label>
-              </div>
-						</div>
-						<figure class="highlight" id="checkboxesRadios">
-<pre><code class="language-markup"><script type="script/prism-html-markup"><div class="list-group">
-  <label class="list-group-item">
-    <input class="form-check-input me-1" type="checkbox" value="">
-    First checkbox
-  </label>
-  <label class="list-group-item">
-    <input class="form-check-input me-1" type="checkbox" value="">
-    Second checkbox
-  </label>
-  <label class="list-group-item">
-    <input class="form-check-input me-1" type="checkbox" value="">
-    Third checkbox
-  </label>
-  <label class="list-group-item">
-    <input class="form-check-input me-1" type="checkbox" value="">
-    Fourth checkbox
-  </label>
-  <label class="list-group-item">
-    <input class="form-check-input me-1" type="checkbox" value="">
-    Fifth checkbox
-  </label>
-</div></script></code></pre>
-							<button type="button" class="btn btn-clipboard" data-clipboard-target="#checkboxesRadios">copy</button>
+							<button type="button" class="btn btn-clipboard" data-clipboard-target="#multipleTargets">copy</button>
             </figure>
             
 					</div>
 					<div class="col-xl-2 content-nav-wrapper">
 						<ul class="nav content-nav d-flex flex-column">
 							<li class="nav-item">
-								<a href="#default" class="nav-link">Basic example</a>
+								<a href="#default" class="nav-link">Default collapse</a>
               </li>
-              <li class="nav-item">
-								<a href="#active-items" class="nav-link">Active items</a>
-              </li>
-              <li class="nav-item">
-								<a href="#disabled-items" class="nav-link">Disabled items</a>
-              </li>
-              <li class="nav-item">
-								<a href="#links-buttons" class="nav-link">Linkd and buttons</a>
-              </li>
-              <li class="nav-item">
-								<a href="#flush" class="nav-link">Flush</a>
-              </li>
-              <li class="nav-item">
-								<a href="#with-badges" class="nav-link">With badges</a>
-              </li>
-              <li class="nav-item">
-								<a href="#checkboxes-radios" class="nav-link">Checkboxes radios</a>
-              </li>
+              
 						</ul>
 					</div>
 				</div>
 			</div>
 
-			<!-- partial:../../partials/_footer.html -->
+
+			<!-- partial:partials/_footer.html -->
 			<footer class="footer d-flex flex-column flex-md-row align-items-center justify-content-between px-4 py-3 border-top small">
 				<p class="text-muted mb-1 mb-md-0">Copyright © 2022 <a href="https://www.nobleui.com/" target="_blank">NobleUI</a>.</p>
 				<p class="text-muted">Handcrafted With <i class="mb-1 text-primary ms-1 icon-sm" data-feather="heart"></i></p>
 			</footer>
 			<!-- partial -->
-	
+		
 		</div>
 	</div>
 
 	<!-- core:js -->
-	<script src="../../../assets/vendors/core/core.js"></script>
+	<script src="<?php echo base_url ('assets/vendors/core/core.js'); ?>"></script>
 	<!-- endinject -->
 
 	<!-- Plugin js for this page -->
-	<script src="../../../assets/vendors/prismjs/prism.js"></script>
-	<script src="../../../assets/vendors/clipboard/clipboard.min.js"></script>
+  <script src="<?php echo base_url ('assets/vendors/flatpickr/flatpickr.min.js'); ?>"></script>
+  <script src="<?php echo base_url ('assets/vendors/apexcharts/apexcharts.min.js'); ?>"></script>
+  <script src="<?php echo base_url ('assets/vendors/prismjs/prism.js'); ?>"></script>
+	<script src="<?php echo base_url ('assets/vendors/clipboard/clipboard.min.js'); ?>"></script>
 	<!-- End plugin js for this page -->
 
 	<!-- inject:js -->
-	<script src="../../../assets/vendors/feather-icons/feather.min.js"></script>
-	<script src="../../../assets/js/template.js"></script>
+	<script src="<?php echo base_url ('assets/vendors/feather-icons/feather.min.js'); ?>"></script>
+	<script src="<?php echo base_url ('assets/js/template.js'); ?>"></script>
 	<!-- endinject -->
 
 	<!-- Custom js for this page -->
+  <script src="<?php echo base_url ('assets/js/dashboard-light.js'); ?>"></script>
 	<!-- End custom js for this page -->
 
 </body>
 
-<!-- Mirrored from www.nobleui.com/html/template/demo1/pages/ui-components/list-group.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 10 Jun 2023 11:55:49 GMT -->
-</html>
+<!-- Mirrored from www.nobleui.com/html/template/demo1/dashboard.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 10 Jun 2023 11:55:43 GMT -->
+</html>    

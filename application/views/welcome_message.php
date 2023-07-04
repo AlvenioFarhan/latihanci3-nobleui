@@ -132,7 +132,7 @@ License: For each use you must have a valid license purchased only from above li
                   <a href="<?php echo base_url ('uicomponents/buttons'); ?>" class="nav-link">Buttons</a>
                 </li>
                 <li class="nav-item">
-                  <a href="<?php echo base_url ('uicomponents/button-group'); ?>" class="nav-link">Button group</a>
+                  <a href="<?php echo base_url ('uicomponents/buttongroup'); ?>" class="nav-link">Button group</a>
                 </li>
                 <li class="nav-item">
                   <a href="<?php echo base_url ('uicomponents/cards'); ?>" class="nav-link">Cards</a>
@@ -147,10 +147,10 @@ License: For each use you must have a valid license purchased only from above li
                   <a href="<?php echo base_url ('uicomponents/dropdowns'); ?>" class="nav-link">Dropdowns</a>
                 </li>
                 <li class="nav-item">
-                  <a href="<?php echo base_url ('uicomponents/list-group'); ?>" class="nav-link">List group</a>
+                  <a href="<?php echo base_url ('uicomponents/listgroup'); ?>" class="nav-link">List group</a>
                 </li>
                 <li class="nav-item">
-                  <a href="<?php echo base_url ('uicomponents/media-object'); ?>" class="nav-link">Media object</a>
+                  <a href="<?php echo base_url ('uicomponents/mediaobject'); ?>" class="nav-link">Media object</a>
                 </li>
                 <li class="nav-item">
                   <a href="<?php echo base_url ('uicomponents/modal'); ?>" class="nav-link">Modal</a>
