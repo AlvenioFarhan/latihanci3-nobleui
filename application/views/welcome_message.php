@@ -85,13 +85,13 @@ License: For each use you must have a valid license purchased only from above li
           <div class="collapse" id="latihan">
               <ul class="nav sub-menu">
                 <li class="nav-item">
-                  <a href="<?php echo base_url (); ?>" class="nav-link">Latihan 1</a>
+                  <a href="<?php echo base_url ('general/blankpage'); ?>" class="nav-link">Latihan 1</a>
                 </li>
                 <li class="nav-item">
-                  <a href="<?php echo base_url (); ?>" class="nav-link">Latihan 2</a>
+                  <a href="<?php echo base_url ('general/blankpage'); ?>" class="nav-link">Latihan 2</a>
                 </li>
                 <li class="nav-item">
-                  <a href="<?php echo base_url (); ?>" class="nav-link">Latihan 3</a>
+                  <a href="<?php echo base_url ('general/blankpage'); ?>" class="nav-link">Latihan 3</a>
                 </li>
               </ul>
             </div>
@@ -291,10 +291,10 @@ License: For each use you must have a valid license purchased only from above li
             <div class="collapse" id="tables">
               <ul class="nav sub-menu">
                 <li class="nav-item">
-                  <a href="tables/basic-table.html" class="nav-link">Basic Tables</a>
+                  <a href="<?php echo base_url ('tables/basictable');?>" class="nav-link">Basic Tables</a>
                 </li>
                 <li class="nav-item">
-                  <a href="tables/data-table.html" class="nav-link">Data Table</a>
+                  <a href="<?php echo base_url ('tables/datatable');?>" class="nav-link">Data Table</a>
                 </li>
               </ul>
             </div>
@@ -308,13 +308,13 @@ License: For each use you must have a valid license purchased only from above li
             <div class="collapse" id="icons">
               <ul class="nav sub-menu">
                 <li class="nav-item">
-                  <a href="icons/feather-icons.html" class="nav-link">Feather Icons</a>
+                  <a href="<?php echo base_url ('icons/feathericons');?>" class="nav-link">Feather Icons</a>
                 </li>
                 <li class="nav-item">
-                  <a href="icons/flag-icons.html" class="nav-link">Flag Icons</a>
+                  <a href="<?php echo base_url ('icons/flagicons');?>" class="nav-link">Flag Icons</a>
                 </li>
                 <li class="nav-item">
-                  <a href="icons/mdi-icons.html" class="nav-link">Mdi Icons</a>
+                  <a href="<?php echo base_url ('icons/mdiicons');?>" class="nav-link">Mdi Icons</a>
                 </li>
               </ul>
             </div>
