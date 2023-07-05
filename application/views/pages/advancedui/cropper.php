@@ -75,6 +75,28 @@ License: For each use you must have a valid license purchased only from above li
               <span class="link-title">Dashboard</span>
             </a>
           </li>
+
+          <li class="nav-item nav-category">Latihan</li>
+          <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="collapse" href="#latihan" role="button" aria-expanded="false" aria-controls="latihan">
+           <i class="link-icon" data-feather="file-text"></i>
+           <span class="link-title">Latihan</span>
+           <i class="link-arrow" data-feather="chevron-down"></i>
+          </a>
+          <div class="collapse" id="latihan">
+              <ul class="nav sub-menu">
+                <li class="nav-item">
+                  <a href="<?php echo base_url ('general/blankpage'); ?>" class="nav-link">Latihan 1</a>
+                </li>
+                <li class="nav-item">
+                  <a href="<?php echo base_url ('general/blankpage'); ?>" class="nav-link">Latihan 2</a>
+                </li>
+                <li class="nav-item">
+                  <a href="<?php echo base_url ('general/blankpage'); ?>" class="nav-link">Latihan 3</a>
+                </li>
+              </ul>
+            </div>
+            
           <li class="nav-item nav-category">web apps</li>
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#emails" role="button" aria-expanded="false" aria-controls="emails">
