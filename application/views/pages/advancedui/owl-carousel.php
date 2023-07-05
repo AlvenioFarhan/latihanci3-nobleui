@@ -665,7 +665,7 @@ License: For each use you must have a valid license purchased only from above li
 						<div class="card">
 							<div class="card-body">
 								<h4 class="card-title">Owl Carousel 2</h4>
-                <p class="text-muted">Read the <a href="https://owlcarousel2.github.io/OwlCarousel2/" target="_blank"> Official Owl Carousel 2 Plugin Documentation </a>for a full list of instructions and other options.</p>
+                <p class="text-muted">Read the <a href="<?php echo base_url ('https://owlcarousel2.github.io/OwlCarousel2/'); ?>" target="_blank"> Official Owl Carousel 2 Plugin Documentation </a>for a full list of instructions and other options.</p>
 							</div>
 						</div>
           </div>
@@ -800,7 +800,7 @@ License: For each use you must have a valid license purchased only from above li
             <div class="card">
               <div class="card-body">
                 <h6 class="card-title">Animation</h6>
-                <p class="text-muted mb-3">Using <a href="https://daneden.github.io/animate.css/" target="_blank">animate.css</a> library.</p>
+                <p class="text-muted mb-3">Using <a href="<?php echo base_url ('https://daneden.github.io/animate.css/'); ?>" target="_blank">animate.css</a> library.</p>
                 <div class="owl-carousel owl-theme owl-animate-css">
                   <div class="item">
                     <img src="<?php echo base_url ('assets/images/photos/img5.jpg'); ?>" alt="item-image">
@@ -834,7 +834,7 @@ License: For each use you must have a valid license purchased only from above li
             <div class="card">
               <div class="card-body">
                 <h6 class="card-title">Mousewheel</h6>
-                <p class="text-muted mb-3">To add mouswheel scrolling just include the fantastic plugin <a href="https://github.com/brandonaaron/jquery-mousewheel" target="_blank">jquery.mousewheel.js</a>.</p>
+                <p class="text-muted mb-3">To add mouswheel scrolling just include the fantastic plugin <a href="<?php echo base_url ('https://github.com/brandonaaron/jquery-mousewheel'); ?>" target="_blank">jquery.mousewheel.js</a>.</p>
                 <div class="owl-carousel owl-theme owl-mouse-wheel">
                   <div class="item">
                     <img src="<?php echo base_url ('assets/images/photos/img1.jpg'); ?>" alt="item-image">

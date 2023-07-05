@@ -36,8 +36,8 @@ License: For each use you must have a valid license purchased only from above li
 	<!-- endinject -->
 
 	<!-- Plugin css for this page -->
-  <link rel="stylesheet" href="<?php echo base_url ('assets/vendors/flatpickr/flatpickr.min.css'); ?>">
-	<!-- End plugin css for this page -->
+
+  <!-- End plugin css for this page -->
 
 	<!-- inject:css -->
 	<link rel="stylesheet" href="<?php echo base_url ('assets/fonts/feather-font/css/iconfont.css'); ?>">
@@ -265,19 +265,19 @@ License: For each use you must have a valid license purchased only from above li
             <div class="collapse" id="charts">
               <ul class="nav sub-menu">
                 <li class="nav-item">
-                  <a href="<?php echo base_url ('charts/apex');?>" class="nav-link">Apex</a>
+                  <a href="charts/apex.html" class="nav-link">Apex</a>
                 </li>
                 <li class="nav-item">
-                  <a href="<?php echo base_url ('charts/chartjs');?>" class="nav-link">ChartJs</a>
+                  <a href="charts/chartjs.html" class="nav-link">ChartJs</a>
                 </li>
                 <li class="nav-item">
-                  <a href="<?php echo base_url ('charts/flot');?>" class="nav-link">Flot</a>
+                  <a href="charts/flot.html" class="nav-link">Flot</a>
                 </li>
                 <li class="nav-item">
-                  <a href="<?php echo base_url ('charts/peity');?>" class="nav-link">Peity</a>
+                  <a href="charts/peity.html" class="nav-link">Peity</a>
                 </li>
                 <li class="nav-item">
-                  <a href="<?php echo base_url ('charts/sparkline');?>" class="nav-link">Sparkline</a>
+                  <a href="charts/sparkline.html" class="nav-link">Sparkline</a>
                 </li>
               </ul>
             </div>
@@ -673,420 +673,347 @@ License: For each use you must have a valid license purchased only from above li
 
 			<div class="page-content">
 
-        <div class="d-flex justify-content-between align-items-center flex-wrap grid-margin">
-          <div>
-            <h4 class="mb-3 mb-md-0">Welcome to Dashboard</h4>
-          </div>
-          <div class="d-flex align-items-center flex-wrap text-nowrap">
-            <div class="input-group flatpickr wd-200 me-2 mb-2 mb-md-0" id="dashboardDate">
-              <span class="input-group-text input-group-addon bg-transparent border-primary" data-toggle><i data-feather="calendar" class="text-primary"></i></span>
-              <input type="text" class="form-control bg-transparent border-primary" placeholder="Select date" data-input>
-            </div>
-            <button type="button" class="btn btn-outline-primary btn-icon-text me-2 mb-2 mb-md-0">
-              <i class="btn-icon-prepend" data-feather="printer"></i>
-              Print
-            </button>
-            <button type="button" class="btn btn-primary btn-icon-text mb-2 mb-md-0">
-              <i class="btn-icon-prepend" data-feather="download-cloud"></i>
-              Download Report
-            </button>
-          </div>
-        </div>
+				<nav class="page-breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="#">Forms</a></li>
+						<li class="breadcrumb-item active" aria-current="page">Advanced Elements</li>
+					</ol>
+				</nav>
 
-        <div class="row">
-          <div class="col-12 col-xl-12 stretch-card">
-            <div class="row flex-grow-1">
-              <div class="col-md-4 grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="d-flex justify-content-between align-items-baseline">
-                      <h6 class="card-title mb-0">New Customers</h6>
-                      <div class="dropdown mb-2">
-                        <a type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          <i class="icon-lg text-muted pb-3px" data-feather="more-horizontal"></i>
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                          <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="eye" class="icon-sm me-2"></i> <span class="">View</span></a>
-                          <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="edit-2" class="icon-sm me-2"></i> <span class="">Edit</span></a>
-                          <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="trash" class="icon-sm me-2"></i> <span class="">Delete</span></a>
-                          <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="printer" class="icon-sm me-2"></i> <span class="">Print</span></a>
-                          <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="download" class="icon-sm me-2"></i> <span class="">Download</span></a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-6 col-md-12 col-xl-5">
-                        <h3 class="mb-2">3,897</h3>
-                        <div class="d-flex align-items-baseline">
-                          <p class="text-success">
-                            <span>+3.3%</span>
-                            <i data-feather="arrow-up" class="icon-sm mb-1"></i>
-                          </p>
-                        </div>
-                      </div>
-                      <div class="col-6 col-md-12 col-xl-7">
-                        <div id="customersChart" class="mt-md-3 mt-xl-0"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="d-flex justify-content-between align-items-baseline">
-                      <h6 class="card-title mb-0">New Orders</h6>
-                      <div class="dropdown mb-2">
-                        <a type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          <i class="icon-lg text-muted pb-3px" data-feather="more-horizontal"></i>
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                          <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="eye" class="icon-sm me-2"></i> <span class="">View</span></a>
-                          <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="edit-2" class="icon-sm me-2"></i> <span class="">Edit</span></a>
-                          <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="trash" class="icon-sm me-2"></i> <span class="">Delete</span></a>
-                          <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="printer" class="icon-sm me-2"></i> <span class="">Print</span></a>
-                          <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="download" class="icon-sm me-2"></i> <span class="">Download</span></a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-6 col-md-12 col-xl-5">
-                        <h3 class="mb-2">35,084</h3>
-                        <div class="d-flex align-items-baseline">
-                          <p class="text-danger">
-                            <span>-2.8%</span>
-                            <i data-feather="arrow-down" class="icon-sm mb-1"></i>
-                          </p>
-                        </div>
-                      </div>
-                      <div class="col-6 col-md-12 col-xl-7">
-                        <div id="ordersChart" class="mt-md-3 mt-xl-0"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="d-flex justify-content-between align-items-baseline">
-                      <h6 class="card-title mb-0">Growth</h6>
-                      <div class="dropdown mb-2">
-                        <a type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          <i class="icon-lg text-muted pb-3px" data-feather="more-horizontal"></i>
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-                          <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="eye" class="icon-sm me-2"></i> <span class="">View</span></a>
-                          <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="edit-2" class="icon-sm me-2"></i> <span class="">Edit</span></a>
-                          <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="trash" class="icon-sm me-2"></i> <span class="">Delete</span></a>
-                          <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="printer" class="icon-sm me-2"></i> <span class="">Print</span></a>
-                          <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="download" class="icon-sm me-2"></i> <span class="">Download</span></a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-6 col-md-12 col-xl-5">
-                        <h3 class="mb-2">89.87%</h3>
-                        <div class="d-flex align-items-baseline">
-                          <p class="text-success">
-                            <span>+2.8%</span>
-                            <i data-feather="arrow-up" class="icon-sm mb-1"></i>
-                          </p>
-                        </div>
-                      </div>
-                      <div class="col-6 col-md-12 col-xl-7">
-                        <div id="growthChart" class="mt-md-3 mt-xl-0"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> <!-- row -->
-
-        <div class="row">
-          <div class="col-12 col-xl-12 grid-margin stretch-card">
-            <div class="card overflow-hidden">
-              <div class="card-body">
-                <div class="d-flex justify-content-between align-items-baseline mb-4 mb-md-3">
-                  <h6 class="card-title mb-0">Revenue</h6>
-                  <div class="dropdown">
-                    <a type="button" id="dropdownMenuButton3" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="icon-lg text-muted pb-3px" data-feather="more-horizontal"></i>
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
-                      <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="eye" class="icon-sm me-2"></i> <span class="">View</span></a>
-                      <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="edit-2" class="icon-sm me-2"></i> <span class="">Edit</span></a>
-                      <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="trash" class="icon-sm me-2"></i> <span class="">Delete</span></a>
-                      <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="printer" class="icon-sm me-2"></i> <span class="">Print</span></a>
-                      <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="download" class="icon-sm me-2"></i> <span class="">Download</span></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="row align-items-start">
-                  <div class="col-md-7">
-                    <p class="text-muted tx-13 mb-3 mb-md-0">Revenue is the income that a business has from its normal business activities, usually from the sale of goods and services to customers.</p>
-                  </div>
-                  <div class="col-md-5 d-flex justify-content-md-end">
-                    <div class="btn-group mb-3 mb-md-0" role="group" aria-label="Basic example">
-                      <button type="button" class="btn btn-outline-primary">Today</button>
-                      <button type="button" class="btn btn-outline-primary d-none d-md-block">Week</button>
-                      <button type="button" class="btn btn-primary">Month</button>
-                      <button type="button" class="btn btn-outline-primary">Year</button>
-                    </div>
-                  </div>
-                </div>
-                <div id="revenueChart" ></div>
-              </div>
-            </div>
-          </div>
-        </div> <!-- row -->
-
-        <div class="row">
-          <div class="col-lg-7 col-xl-8 grid-margin stretch-card">
-            <div class="card">
-              <div class="card-body">
-                <div class="d-flex justify-content-between align-items-baseline mb-2">
-                  <h6 class="card-title mb-0">Monthly sales</h6>
-                  <div class="dropdown mb-2">
-                    <a type="button" id="dropdownMenuButton4" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="icon-lg text-muted pb-3px" data-feather="more-horizontal"></i>
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton4">
-                      <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="eye" class="icon-sm me-2"></i> <span class="">View</span></a>
-                      <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="edit-2" class="icon-sm me-2"></i> <span class="">Edit</span></a>
-                      <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="trash" class="icon-sm me-2"></i> <span class="">Delete</span></a>
-                      <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="printer" class="icon-sm me-2"></i> <span class="">Print</span></a>
-                      <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="download" class="icon-sm me-2"></i> <span class="">Download</span></a>
-                    </div>
-                  </div>
-                </div>
-                <p class="text-muted">Sales are activities related to selling or the number of goods or services sold in a given time period.</p>
-                <div id="monthlySalesChart"></div>
-              </div> 
-            </div>
-          </div>
-          <div class="col-lg-5 col-xl-4 grid-margin stretch-card">
-            <div class="card">
-              <div class="card-body">
-                <div class="d-flex justify-content-between align-items-baseline">
-                  <h6 class="card-title mb-0">Cloud storage</h6>
-                  <div class="dropdown mb-2">
-                    <a type="button" id="dropdownMenuButton5" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="icon-lg text-muted pb-3px" data-feather="more-horizontal"></i>
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton5">
-                      <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="eye" class="icon-sm me-2"></i> <span class="">View</span></a>
-                      <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="edit-2" class="icon-sm me-2"></i> <span class="">Edit</span></a>
-                      <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="trash" class="icon-sm me-2"></i> <span class="">Delete</span></a>
-                      <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="printer" class="icon-sm me-2"></i> <span class="">Print</span></a>
-                      <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="download" class="icon-sm me-2"></i> <span class="">Download</span></a>
-                    </div>
-                  </div>
-                </div>
-                <div id="storageChart"></div>
-                <div class="row mb-3">
-                  <div class="col-6 d-flex justify-content-end">
+				<div class="row">
+					<div class="col-lg-6 grid-margin stretch-card">
+						<div class="card">
+							<div class="card-body">
+								<h4 class="card-title">Form Validation</h4>
+								<p class="text-muted mb-3">Read the <a href="https://jqueryvalidation.org/" target="_blank"> Official jQuery Validation Documentation </a>for a full list of instructions and other options.</p>
+								<form id="signupForm">
+									<div class="mb-3">
+										<label for="name" class="form-label">Name</label>
+										<input id="name" class="form-control" name="name" type="text">
+									</div>
+									<div class="mb-3">
+										<label for="email" class="form-label">Email</label>
+										<input id="email" class="form-control" name="email" type="email">
+									</div>
+                  <div class="mb-3">
+										<label for="ageSelect" class="form-label">Age</label>
+										<select class="form-select" name="age_select" id="ageSelect">
+											<option selected disabled>Select your age</option>
+											<option>12-18</option>
+											<option>18-22</option>
+											<option>22-30</option>
+											<option>30-60</option>
+											<option>Above 60</option>
+										</select>
+									</div>
+                  <div class="mb-3">
+										<label class="form-label">Gender</label>
                     <div>
-                      <label class="d-flex align-items-center justify-content-end tx-10 text-uppercase fw-bolder">Total storage <span class="p-1 ms-1 rounded-circle bg-secondary"></span></label>
-                      <h5 class="fw-bolder mb-0 text-end">8TB</h5>
+                      <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" name="gender_radio" id="gender1">
+                        <label class="form-check-label" for="gender1">
+                          Male
+                        </label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" name="gender_radio" id="gender2">
+                        <label class="form-check-label" for="gender2">
+                          Female
+                        </label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" name="gender_radio" id="gender3">
+                        <label class="form-check-label" for="gender3">
+                          Other
+                        </label>
+                      </div>
                     </div>
                   </div>
-                  <div class="col-6">
+                  <div class="mb-3">
+										<label class="form-label">Skills</label>
                     <div>
-                      <label class="d-flex align-items-center tx-10 text-uppercase fw-bolder"><span class="p-1 me-1 rounded-circle bg-primary"></span> Used storage</label>
-                      <h5 class="fw-bolder mb-0">~5TB</h5>
+                      <div class="form-check form-check-inline">
+                        <input type="checkbox" name="skill_check" class="form-check-input" id="checkInline1">
+                        <label class="form-check-label" for="checkInline1">
+                          Angular
+                        </label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input type="checkbox" name="skill_check" class="form-check-input" id="checkInline2">
+                        <label class="form-check-label" for="checkInline2">
+                          ReactJs
+                        </label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input type="checkbox" name="skill_check" class="form-check-input" id="checkInline3">
+                        <label class="form-check-label" for="checkInline3">
+                          VueJs
+                        </label>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="d-grid">
-                  <button class="btn btn-primary">Upgrade storage</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> <!-- row -->
+									<div class="mb-3">
+										<label for="password" class="form-label">Password</label>
+										<input id="password" class="form-control" name="password" type="password">
+									</div>
+									<div class="mb-3">
+										<label for="confirm_password" class="form-label">Confirm password</label>
+										<input id="confirm_password" class="form-control" name="confirm_password" type="password">
+									</div>
+                  <div class="mb-3">
+                    <div class="form-check">
+                      <label class="form-check-label" for="termsCheck">
+                        Agree to <a href="#"> terms and conditions </a>
+                      </label>
+                      <input type="checkbox" class="form-check-input" name="terms_agree" id="termsCheck">
+                    </div>
+                  </div>
+									<input class="btn btn-primary" type="submit" value="Submit">
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 grid-margin stretch-card">
+						<div class="card">
+							<div class="card-body">
+								<h4 class="card-title">Bootstrap MaxLength</h4>
+								<p class="text-muted mb-3">Read the <a href="https://github.com/mimo84/bootstrap-maxlength" target="_blank"> Official Bootstrap MaxLength Documentation </a>for a full list of instructions and other options.</p>
+								<div class="row mb-3">
+									<div class="col-lg-3">
+										<label for="defaultconfig" class="col-form-label">Default usage</label>
+									</div>
+									<div class="col-lg-8">
+										<input class="form-control" maxlength="25" name="defaultconfig" id="defaultconfig" type="text" placeholder="Type Something..">
+									</div>
+								</div>
+								<div class="row mb-3">
+									<div class="col-lg-3">
+										<label for="defaultconfig-2" class="col-form-label">Few options</label>
+									</div>
+									<div class="col-lg-8">
+										<input class="form-control" maxlength="20" name="defaultconfig-2" id="defaultconfig-2" type="text" placeholder="Type Something..">
+									</div>
+								</div>
+								<div class="row mb-3">
+									<div class="col-lg-3">
+										<label for="defaultconfig-3" class="col-form-label">All the options</label>
+									</div>
+									<div class="col-lg-8">
+										<input class="form-control" maxlength="10" name="defaultconfig-3" id="defaultconfig-3" type="text" placeholder="Type Something..">
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-lg-3">
+										<label for="defaultconfig-4" class="col-form-label">Text Area</label>
+									</div>
+									<div class="col-lg-8">
+										<textarea id="maxlength-textarea" class="form-control" id="defaultconfig-4" maxlength="100" rows="8" placeholder="This textarea has a limit of 100 chars."></textarea>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 
-        <div class="row">
-          <div class="col-lg-5 col-xl-4 grid-margin grid-margin-xl-0 stretch-card">
-            <div class="card">
-              <div class="card-body">
-                <div class="d-flex justify-content-between align-items-baseline mb-2">
-                  <h6 class="card-title mb-0">Inbox</h6>
-                  <div class="dropdown mb-2">
-                    <a type="button" id="dropdownMenuButton6" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="icon-lg text-muted pb-3px" data-feather="more-horizontal"></i>
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton6">
-                      <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="eye" class="icon-sm me-2"></i> <span class="">View</span></a>
-                      <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="edit-2" class="icon-sm me-2"></i> <span class="">Edit</span></a>
-                      <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="trash" class="icon-sm me-2"></i> <span class="">Delete</span></a>
-                      <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="printer" class="icon-sm me-2"></i> <span class="">Print</span></a>
-                      <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="download" class="icon-sm me-2"></i> <span class="">Download</span></a>
-                    </div>
+				<div class="row">
+					<div class="col-md-12 grid-margin">
+						<div class="card">
+							<div class="card-body">
+								<h6 class="card-title">Input Mask</h6>
+								<p class="text-muted mb-3">Read the <a href="https://github.com/RobinHerbots/Inputmask" target="_blank"> Official Inputmask Documentation </a>for a full list of instructions and other options.</p>
+								<form class="forms-sample">
+									<div class="row mb-3">
+										<div class="col">
+											<label class="form-label">Date:</label>
+											<input class="form-control mb-4 mb-md-0" data-inputmask="'alias': 'datetime'" data-inputmask-inputformat="dd/mm/yyyy"/>
+										</div>
+										<div class="col-md-6">
+											<label class="form-label">Time (12 hour):</label>
+											<input class="form-control" data-inputmask="'alias': 'datetime'" data-inputmask-inputformat="hh:mm tt" />
+										</div>
+									</div>
+									<div class="row mb-3">
+										<div class="col-md-6">
+											<label class="form-label">Date time:</label>
+											<input class="form-control mb-4 mb-md-0" data-inputmask="'alias': 'datetime'" data-inputmask-inputformat="dd/mm/yyyy HH:MM:ss" />
+										</div>
+										<div class="col-md-6">
+											<label class="form-label">Date with custom placeholder:</label>
+											<input class="form-control" data-inputmask="'alias': 'datetime'" data-inputmask-placeholder="*" data-inputmask-inputformat="dd/mm/yyyy" />
+										</div>
+									</div>
+									<div class="row mb-3">
+										<div class="col-md-6">
+											<label class="form-label">Phone:</label>
+											<input class="form-control mb-4 mb-md-0" data-inputmask-alias="(+99) 9999-9999"/>
+										</div>
+										<div class="col-md-6">
+											<label class="form-label">Credit card:</label>
+											<input class="form-control" data-inputmask-alias="9999-9999-9999-9999"/>
+										</div>
+									</div>
+									<div class="row mb-3">
+										<div class="col-md-6">
+											<label class="form-label">Currency:</label>
+											<input class="form-control mb-4 mb-md-0" data-inputmask="'alias': 'currency', 'prefix':'$'"/>
+										</div>
+										<div class="col-md-6">
+											<label class="form-label">Serial key:</label>
+											<input class="form-control" data-inputmask-alias="****-****-****-****"/>
+										</div>
+									</div>
+									<div class="row mb-3">
+										<div class="col-md-6">
+											<label class="form-label">Email:</label>
+											<input class="form-control mb-4 mb-md-0" data-inputmask="'alias': 'email'"/>
+										</div>
+										<div class="col-md-6">
+											<label class="form-label">Ip address:</label>
+											<input class="form-control" data-inputmask="'alias': 'ip'"/>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-6 grid-margin stretch-card">
+						<div class="card">
+							<div class="card-body">
+								<h4 class="card-title">Select 2</h4>
+								<p class="text-muted mb-3">Read the <a href="https://select2.org/" target="_blank"> Official Select2 Documentation </a>for a full list of instructions and other options.</p>
+								<div class="mb-3">
+									<label class="form-label">Single select box using select 2</label>
+									<select class="js-example-basic-single form-select" data-width="100%">
+										<option value="TX">Texas</option>
+										<option value="NY">New York</option>
+										<option value="FL">Florida</option>
+										<option value="KN">Kansas</option>
+										<option value="HW">Hawaii</option>
+									</select>
+								</div>
+								<div class="mb-3">
+									<label class="form-label">Multiple select using select 2</label>
+									<select class="js-example-basic-multiple form-select" multiple="multiple" data-width="100%">
+										<option value="TX">Texas</option>
+										<option value="WY">Wyoming</option>
+										<option value="NY">New York</option>
+										<option value="FL">Florida</option>
+										<option value="KN">Kansas</option>
+										<option value="HW">Hawaii</option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 grid-margin stretch-card">
+						<div class="card">
+							<div class="card-body">
+								<h4 class="card-title">Typeahead</h4>
+								<p class="text-muted mb-3">Read the <a href="<?php echo base_url ('github.com/twitter/typeahead.html'); ?>" target="_blank"> Official Typeahead.js Documentation </a>for a full list of instructions and other options.</p>
+								<div class="row">
+									<div class="col">
+										<label class="form-label">Basic</label>
+										<div id="the-basics">
+											<input class="typeahead" autocomplete="off" type="text" placeholder="States of USA">
+										</div>
+									</div>
+									<div class="col">
+										<label class="form-label">Bloodhound</label>
+										<div id="bloodhound">
+											<input class="typeahead" type="text" placeholder="States of USA">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-6 grid-margin stretch-card">
+						<div class="card">
+							<div class="card-body">
+								<h6 class="card-title">Tags input</h6>
+								<p class="text-muted mb-3">Read the <a href="https://www.npmjs.com/package/jquery-tags-input" target="_blank"> Official jQuery-tags-input Documentation </a>for a full list of instructions and other options.</p>
+								<p class="mb-2">Type something to add a new tag</p>
+								<div>
+									<input name="tags" id="tags" value="New York,Texas,Florida,New Mexico" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 grid-margin stretch-card">
+						<div class="card">
+							<div class="card-body">
+								<h6 class="card-title">Color picker</h6>
+								<p class="text-muted mb-3">Flat, simple, and responsive Color-Picker library. Read the <a href="https://github.com/Simonwep/pickr" target="_blank"> Official @simonwep/pickr Documentation </a>for a full list of instructions and other options.</p>
+                <p class="mb-2">Click the color square to activate the Color Picker</p>
+                <div class="d-flex">
+                  <div class="me-2">
+                    <div id="pickr_1"></div>
+                  </div>
+                  <div class="me-2">
+                    <div id="pickr_2"></div>
+                  </div>
+                  <div class="me-2">
+                    <div id="pickr_3"></div>
                   </div>
                 </div>
-                <div class="d-flex flex-column">
-                  <a href="javascript:;" class="d-flex align-items-center border-bottom pb-3">
-                    <div class="me-3">
-                      <img src="<?php echo base_url ('assets/images/faces/face2.jpg'); ?>" class="rounded-circle wd-35" alt="user">
-                    </div>
-                    <div class="w-100">
-                      <div class="d-flex justify-content-between">
-                        <h6 class="text-body mb-2">Leonardo Payne</h6>
-                        <p class="text-muted tx-12">12.30 PM</p>
-                      </div>
-                      <p class="text-muted tx-13">Hey! there I'm available...</p>
-                    </div>
-                  </a>
-                  <a href="javascript:;" class="d-flex align-items-center border-bottom py-3">
-                    <div class="me-3">
-                      <img src="<?php echo base_url ('assets/images/faces/face3.jpg'); ?>" class="rounded-circle wd-35" alt="user">
-                    </div>
-                    <div class="w-100">
-                      <div class="d-flex justify-content-between">
-                        <h6 class="text-body mb-2">Carl Henson</h6>
-                        <p class="text-muted tx-12">02.14 AM</p>
-                      </div>
-                      <p class="text-muted tx-13">I've finished it! See you so..</p>
-                    </div>
-                  </a>
-                  <a href="javascript:;" class="d-flex align-items-center border-bottom py-3">
-                    <div class="me-3">
-                      <img src="<?php echo base_url ('assets/images/faces/face4.jpg'); ?>" class="rounded-circle wd-35" alt="user">
-                    </div>
-                    <div class="w-100">
-                      <div class="d-flex justify-content-between">
-                        <h6 class="text-body mb-2">Jensen Combs</h6>
-                        <p class="text-muted tx-12">08.22 PM</p>
-                      </div>
-                      <p class="text-muted tx-13">This template is awesome!</p>
-                    </div>
-                  </a>
-                  <a href="javascript:;" class="d-flex align-items-center border-bottom py-3">
-                    <div class="me-3">
-                      <img src="<?php echo base_url ('assets/images/faces/face5.jpg'); ?>" class="rounded-circle wd-35" alt="user">
-                    </div>
-                    <div class="w-100">
-                      <div class="d-flex justify-content-between">
-                        <h6 class="text-body mb-2">Amiah Burton</h6>
-                        <p class="text-muted tx-12">05.49 AM</p>
-                      </div>
-                      <p class="text-muted tx-13">Nice to meet you</p>
-                    </div>
-                  </a>
-                  <a href="javascript:;" class="d-flex align-items-center border-bottom py-3">
-                    <div class="me-3">
-                      <img src="<?php echo base_url ('assets/images/faces/face6.jpg'); ?>" class="rounded-circle wd-35" alt="user">
-                    </div>
-                    <div class="w-100">
-                      <div class="d-flex justify-content-between">
-                        <h6 class="text-body mb-2">Yaretzi Mayo</h6>
-                        <p class="text-muted tx-12">01.19 AM</p>
-                      </div>
-                      <p class="text-muted tx-13">Hey! there I'm available...</p>
-                    </div>
-                  </a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-6 grid-margin stretch-card">
+						<div class="card">
+							<div class="card-body">
+								<h6 class="card-title">Date picker</h6>
+								<p class="text-muted mb-3">Read the <a href="https://flatpickr.js.org/" target="_blank"> Official Flatpickr Documentation </a>for a full list of instructions and other options.</p>
+                <div class="input-group flatpickr" id="flatpickr-date">
+                  <input type="text" class="form-control" placeholder="Select date" data-input>
+                  <span class="input-group-text input-group-addon" data-toggle><i data-feather="calendar"></i></span>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-7 col-xl-8 stretch-card">
-            <div class="card">
-              <div class="card-body">
-                <div class="d-flex justify-content-between align-items-baseline mb-2">
-                  <h6 class="card-title mb-0">Projects</h6>
-                  <div class="dropdown mb-2">
-                    <a type="button" id="dropdownMenuButton7" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="icon-lg text-muted pb-3px" data-feather="more-horizontal"></i>
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton7">
-                      <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="eye" class="icon-sm me-2"></i> <span class="">View</span></a>
-                      <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="edit-2" class="icon-sm me-2"></i> <span class="">Edit</span></a>
-                      <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="trash" class="icon-sm me-2"></i> <span class="">Delete</span></a>
-                      <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="printer" class="icon-sm me-2"></i> <span class="">Print</span></a>
-                      <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="download" class="icon-sm me-2"></i> <span class="">Download</span></a>
-                    </div>
-                  </div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 grid-margin stretch-card">
+						<div class="card">
+							<div class="card-body">
+								<h6 class="card-title">Time picker</h6>
+								<p class="text-muted mb-3">Read the <a href="https://flatpickr.js.org/" target="_blank"> Official Flatpickr Documentation </a>for a full list of instructions and other options.</p>
+                <div class="input-group flatpickr" id="flatpickr-time">
+                  <input type="text" class="form-control" placeholder="Select time" data-input>
+                  <span class="input-group-text input-group-addon" data-toggle><i data-feather="clock"></i></span>
                 </div>
-                <div class="table-responsive">
-                  <table class="table table-hover mb-0">
-                    <thead>
-                      <tr>
-                        <th class="pt-0">#</th>
-                        <th class="pt-0">Project Name</th>
-                        <th class="pt-0">Start Date</th>
-                        <th class="pt-0">Due Date</th>
-                        <th class="pt-0">Status</th>
-                        <th class="pt-0">Assign</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>NobleUI jQuery</td>
-                        <td>01/01/2022</td>
-                        <td>26/04/2022</td>
-                        <td><span class="badge bg-danger">Released</span></td>
-                        <td>Leonardo Payne</td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td>NobleUI Angular</td>
-                        <td>01/01/2022</td>
-                        <td>26/04/2022</td>
-                        <td><span class="badge bg-success">Review</span></td>
-                        <td>Carl Henson</td>
-                      </tr>
-                      <tr>
-                        <td>3</td>
-                        <td>NobleUI ReactJs</td>
-                        <td>01/05/2022</td>
-                        <td>10/09/2022</td>
-                        <td><span class="badge bg-info">Pending</span></td>
-                        <td>Jensen Combs</td>
-                      </tr>
-                      <tr>
-                        <td>4</td>
-                        <td>NobleUI VueJs</td>
-                        <td>01/01/2022</td>
-                        <td>31/11/2022</td>
-                        <td><span class="badge bg-warning">Work in Progress</span>
-                        </td>
-                        <td>Amiah Burton</td>
-                      </tr>
-                      <tr>
-                        <td>5</td>
-                        <td>NobleUI Laravel</td>
-                        <td>01/01/2022</td>
-                        <td>31/12/2022</td>
-                        <td><span class="badge bg-danger">Coming soon</span></td>
-                        <td>Yaretzi Mayo</td>
-                      </tr>
-                      <tr>
-                        <td>6</td>
-                        <td>NobleUI NodeJs</td>
-                        <td>01/01/2022</td>
-                        <td>31/12/2022</td>
-                        <td><span class="badge bg-primary">Coming soon</span></td>
-                        <td>Carl Henson</td>
-                      </tr>
-                      <tr>
-                        <td class="border-bottom">3</td>
-                        <td class="border-bottom">NobleUI EmberJs</td>
-                        <td class="border-bottom">01/05/2022</td>
-                        <td class="border-bottom">10/11/2022</td>
-                        <td class="border-bottom"><span class="badge bg-info">Pending</span></td>
-                        <td class="border-bottom">Jensen Combs</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div> 
-            </div>
-          </div>
-        </div> <!-- row -->
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-6 stretch-card grid-margin grid-margin-md-0">
+						<div class="card">
+							<div class="card-body">
+								<h6 class="card-title">Dropzone</h6>
+								<p class="text-muted mb-3">Read the <a href="https://www.dropzonejs.com/" target="_blank"> Official Dropzone.js Documentation </a>for a full list of instructions and other options.</p>
+								<form action="https://www.nobleui.com/file-upload" class="dropzone" id="exampleDropzone"></form>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 stretch-card">
+						<div class="card">
+							<div class="card-body">
+								<h6 class="card-title">Dropify</h6>
+								<p class="text-muted mb-3">Read the <a href="https://github.com/JeremyFagis/dropify" target="_blank"> Official Dropify Documentation </a>for a full list of instructions and other options.</p>
+								<input type="file" id="myDropify"/>
+							</div>
+						</div>
+					</div>
+				</div>
 
 			</div>
 
@@ -1105,8 +1032,7 @@ License: For each use you must have a valid license purchased only from above li
 	<!-- endinject -->
 
 	<!-- Plugin js for this page -->
-  <script src="<?php echo base_url ('assets/vendors/flatpickr/flatpickr.min.js'); ?>"></script>
-  <script src="<?php echo base_url ('assets/vendors/apexcharts/apexcharts.min.js'); ?>"></script>
+  
 	<!-- End plugin js for this page -->
 
 	<!-- inject:js -->
@@ -1115,8 +1041,8 @@ License: For each use you must have a valid license purchased only from above li
 	<!-- endinject -->
 
 	<!-- Custom js for this page -->
-  <script src="<?php echo base_url ('assets/js/dashboard-light.js'); ?>"></script>
-	<!-- End custom js for this page -->
+  
+  <!-- End custom js for this page -->
 
 </body>
 
