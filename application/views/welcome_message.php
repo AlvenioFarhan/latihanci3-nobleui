@@ -85,7 +85,7 @@ License: For each use you must have a valid license purchased only from above li
           <div class="collapse" id="latihan">
               <ul class="nav sub-menu">
                 <li class="nav-item">
-                  <a href="<?php echo base_url ('general/blankpage'); ?>" class="nav-link">Latihan 1</a>
+                  <a href="<?php echo base_url ('latihan/formdatauser'); ?>" class="nav-link">Form & Data User</a>
                 </li>
                 <li class="nav-item">
                   <a href="<?php echo base_url ('general/blankpage'); ?>" class="nav-link">Latihan 2</a>
