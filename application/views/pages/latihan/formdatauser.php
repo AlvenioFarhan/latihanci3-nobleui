@@ -742,8 +742,8 @@ License: For each use you must have a valid license purchased only from above li
                                             </div>
                                             <div class="col-auto">
                                                 <div class="mb-3">
-                                                    <label for="exampleInputDate1" class="date" id="exampleDate1" autocomplete="off" placeholder="Birth Date">Birth Date</label> <br>
-                                                    <input type="date">
+                                                    <label for="exampleInputDate1" class="form-label" id="exampleDate1" autocomplete="off" placeholder="Birth Date">Birth Date</label> <br>
+                                                    <input type="date" class="form-control" id="exampleInputDate1" autocomplete="off" placeholder="Date">
                                                 </div>
                                             </div>
 
