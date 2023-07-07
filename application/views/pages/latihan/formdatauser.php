@@ -742,12 +742,12 @@ License: For each use you must have a valid license purchased only from above li
                                             </div>
                                             <div class="col-auto">
                                                 <div class="mb-3">
-                                                    <label for="exampleInputDate1" class="form-label" id="exampleDate1" autocomplete="off" placeholder="Birth Date">Birth Date</label> <br>
+                                                    <label for="exampleInputDate1" class="date" id="exampleDate1" autocomplete="off" placeholder="Birth Date">Birth Date</label> <br>
                                                     <input type="date">
                                                 </div>
                                             </div>
 
-                                            <div class="col-auto">
+                                            <div class="mb-3">
                                                 <div class="mb-3 mt-3">
                                                     <label for="exampleFormControlTextarea1" class="form-label">Address</label>
                                                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
